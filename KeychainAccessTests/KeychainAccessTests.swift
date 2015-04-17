@@ -1,6 +1,6 @@
 //
-//  PosterTests.swift
-//  PosterTests
+//  KeychainAccessTests.swift
+//  KeychainAccessTests
 //
 //  Created by dasdom on 12.04.15.
 //  Copyright (c) 2015 Dominik Hauser. All rights reserved.
@@ -9,7 +9,7 @@
 import Cocoa
 import XCTest
 
-class PosterTests: XCTestCase {
+class KeychainAccessTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

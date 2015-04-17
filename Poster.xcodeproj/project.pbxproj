@@ -11,7 +11,25 @@
 		F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759651ADA7C9A008F1F2E /* ViewController.swift */; };
 		F24759681ADA7C9A008F1F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24759671ADA7C9A008F1F2E /* Images.xcassets */; };
 		F247596B1ADA7C9A008F1F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24759691ADA7C9A008F1F2E /* Main.storyboard */; };
-		F24759771ADA7C9A008F1F2E /* PosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759761ADA7C9A008F1F2E /* PosterTests.swift */; };
+		F24759851ADA92F3008F1F2E /* APICommunicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */; };
+		F24759871ADA9C2E008F1F2E /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */; };
+		F24759921ADAFCC3008F1F2E /* PostToADN.h in Headers */ = {isa = PBXBuildFile; fileRef = F24759911ADAFCC3008F1F2E /* PostToADN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F24759981ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
+		F24759A11ADAFCC4008F1F2E /* PostToADNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */; };
+		F24759A41ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
+		F24759A51ADAFCC4008F1F2E /* PostToADN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F24759B11ADB0042008F1F2E /* ADNAPICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */; };
+		F24759B21ADB0042008F1F2E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AE1ADB0042008F1F2E /* ImageService.swift */; };
+		F24759B31ADB0042008F1F2E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AF1ADB0042008F1F2E /* PostService.swift */; };
+		F24759B41ADB0042008F1F2E /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759B01ADB0042008F1F2E /* RequestFactory.swift */; };
+		F24759BF1ADB01CD008F1F2E /* KeychainAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = F24759BE1ADB01CD008F1F2E /* KeychainAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F24759C51ADB01CD008F1F2E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
+		F24759CE1ADB01CE008F1F2E /* KeychainAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759CD1ADB01CE008F1F2E /* KeychainAccessTests.swift */; };
+		F24759D11ADB01CE008F1F2E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
+		F24759D21ADB01CE008F1F2E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F24759DA1ADB0268008F1F2E /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759D91ADB0268008F1F2E /* KeychainAccess.swift */; };
+		F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759DB1ADDA633008F1F2E /* BackgroundView.swift */; };
+		F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +40,64 @@
 			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
 			remoteInfo = Poster;
 		};
+		F24759991ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F247598C1ADAFCC3008F1F2E;
+			remoteInfo = PostToADN;
+		};
+		F247599B1ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
+			remoteInfo = Poster;
+		};
+		F24759A21ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F247598C1ADAFCC3008F1F2E;
+			remoteInfo = PostToADN;
+		};
+		F24759C61ADB01CD008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F24759B91ADB01CD008F1F2E;
+			remoteInfo = KeychainAccess;
+		};
+		F24759C81ADB01CD008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
+			remoteInfo = Poster;
+		};
+		F24759CF1ADB01CE008F1F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F24759B91ADB01CD008F1F2E;
+			remoteInfo = KeychainAccess;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F24759A91ADAFCC4008F1F2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F24759D21ADB01CE008F1F2E /* KeychainAccess.framework in Embed Frameworks */,
+				F24759A51ADAFCC4008F1F2E /* PostToADN.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F247595E1ADA7C9A008F1F2E /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +108,27 @@
 		F247596A1ADA7C9A008F1F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F24759701ADA7C9A008F1F2E /* PosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759751ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F24759761ADA7C9A008F1F2E /* PosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTests.swift; sourceTree = "<group>"; };
+		F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICommunicatorTests.swift; path = Networking/APICommunicatorTests.swift; sourceTree = "<group>"; };
+		F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebLoginViewController.swift; path = Networking/WebLoginViewController.swift; sourceTree = "<group>"; };
+		F247598D1ADAFCC3008F1F2E /* PostToADN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostToADN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24759901ADAFCC3008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24759911ADAFCC3008F1F2E /* PostToADN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostToADN.h; sourceTree = "<group>"; };
+		F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostToADNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F247599F1ADAFCC4008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostToADNTests.swift; sourceTree = "<group>"; };
+		F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADNAPICommunicator.swift; sourceTree = "<group>"; };
+		F24759AE1ADB0042008F1F2E /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F24759AF1ADB0042008F1F2E /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F24759B01ADB0042008F1F2E /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24759BD1ADB01CD008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24759BE1ADB01CD008F1F2E /* KeychainAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainAccess.h; sourceTree = "<group>"; };
+		F24759C41ADB01CD008F1F2E /* KeychainAccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainAccessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24759CC1ADB01CE008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24759CD1ADB01CE008F1F2E /* KeychainAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccessTests.swift; sourceTree = "<group>"; };
+		F24759D91ADB0268008F1F2E /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		F24759DB1ADDA633008F1F2E /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Posting/BackgroundView.swift; sourceTree = "<group>"; };
+		F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24759D11ADB01CE008F1F2E /* KeychainAccess.framework in Frameworks */,
+				F24759A41ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +145,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759891ADAFCC3008F1F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759941ADAFCC3008F1F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759981ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759B61ADB01CD008F1F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759C11ADB01CD008F1F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759C51ADB01CD008F1F2E /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +186,10 @@
 			children = (
 				F24759601ADA7C9A008F1F2E /* Poster */,
 				F24759731ADA7C9A008F1F2E /* PosterTests */,
+				F247598E1ADAFCC3008F1F2E /* PostToADN */,
+				F247599D1ADAFCC4008F1F2E /* PostToADNTests */,
+				F24759BB1ADB01CD008F1F2E /* KeychainAccess */,
+				F24759CA1ADB01CD008F1F2E /* KeychainAccessTests */,
 				F247595F1ADA7C9A008F1F2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +199,10 @@
 			children = (
 				F247595E1ADA7C9A008F1F2E /* Poster.app */,
 				F24759701ADA7C9A008F1F2E /* PosterTests.xctest */,
+				F247598D1ADAFCC3008F1F2E /* PostToADN.framework */,
+				F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */,
+				F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */,
+				F24759C41ADB01CD008F1F2E /* KeychainAccessTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,8 +212,10 @@
 			children = (
 				F24759631ADA7C9A008F1F2E /* AppDelegate.swift */,
 				F24759651ADA7C9A008F1F2E /* ViewController.swift */,
-				F24759671ADA7C9A008F1F2E /* Images.xcassets */,
+				F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */,
+				F24759DB1ADDA633008F1F2E /* BackgroundView.swift */,
 				F24759691ADA7C9A008F1F2E /* Main.storyboard */,
+				F24759671ADA7C9A008F1F2E /* Images.xcassets */,
 				F24759611ADA7C9A008F1F2E /* Supporting Files */,
 			);
 			path = Poster;
@@ -95,7 +232,7 @@
 		F24759731ADA7C9A008F1F2E /* PosterTests */ = {
 			isa = PBXGroup;
 			children = (
-				F24759761ADA7C9A008F1F2E /* PosterTests.swift */,
+				F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */,
 				F24759741ADA7C9A008F1F2E /* Supporting Files */,
 			);
 			path = PosterTests;
@@ -109,7 +246,100 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F247598E1ADAFCC3008F1F2E /* PostToADN */ = {
+			isa = PBXGroup;
+			children = (
+				F24759911ADAFCC3008F1F2E /* PostToADN.h */,
+				F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */,
+				F24759AE1ADB0042008F1F2E /* ImageService.swift */,
+				F24759AF1ADB0042008F1F2E /* PostService.swift */,
+				F24759B01ADB0042008F1F2E /* RequestFactory.swift */,
+				F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */,
+				F247598F1ADAFCC3008F1F2E /* Supporting Files */,
+			);
+			path = PostToADN;
+			sourceTree = "<group>";
+		};
+		F247598F1ADAFCC3008F1F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24759901ADAFCC3008F1F2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F247599D1ADAFCC4008F1F2E /* PostToADNTests */ = {
+			isa = PBXGroup;
+			children = (
+				F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */,
+				F247599E1ADAFCC4008F1F2E /* Supporting Files */,
+			);
+			path = PostToADNTests;
+			sourceTree = "<group>";
+		};
+		F247599E1ADAFCC4008F1F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F247599F1ADAFCC4008F1F2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F24759BB1ADB01CD008F1F2E /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				F24759BE1ADB01CD008F1F2E /* KeychainAccess.h */,
+				F24759D91ADB0268008F1F2E /* KeychainAccess.swift */,
+				F24759BC1ADB01CD008F1F2E /* Supporting Files */,
+			);
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		F24759BC1ADB01CD008F1F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24759BD1ADB01CD008F1F2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F24759CA1ADB01CD008F1F2E /* KeychainAccessTests */ = {
+			isa = PBXGroup;
+			children = (
+				F24759CD1ADB01CE008F1F2E /* KeychainAccessTests.swift */,
+				F24759CB1ADB01CE008F1F2E /* Supporting Files */,
+			);
+			path = KeychainAccessTests;
+			sourceTree = "<group>";
+		};
+		F24759CB1ADB01CE008F1F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24759CC1ADB01CE008F1F2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F247598A1ADAFCC3008F1F2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759921ADAFCC3008F1F2E /* PostToADN.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759B71ADB01CD008F1F2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759BF1ADB01CD008F1F2E /* KeychainAccess.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F247595D1ADA7C9A008F1F2E /* Poster */ = {
@@ -119,10 +349,13 @@
 				F247595A1ADA7C9A008F1F2E /* Sources */,
 				F247595B1ADA7C9A008F1F2E /* Frameworks */,
 				F247595C1ADA7C9A008F1F2E /* Resources */,
+				F24759A91ADAFCC4008F1F2E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F24759A31ADAFCC4008F1F2E /* PBXTargetDependency */,
+				F24759D01ADB01CE008F1F2E /* PBXTargetDependency */,
 			);
 			name = Poster;
 			productName = Poster;
@@ -147,6 +380,80 @@
 			productReference = F24759701ADA7C9A008F1F2E /* PosterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F247598C1ADAFCC3008F1F2E /* PostToADN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24759A61ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADN" */;
+			buildPhases = (
+				F24759881ADAFCC3008F1F2E /* Sources */,
+				F24759891ADAFCC3008F1F2E /* Frameworks */,
+				F247598A1ADAFCC3008F1F2E /* Headers */,
+				F247598B1ADAFCC3008F1F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PostToADN;
+			productName = PostToADN;
+			productReference = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F24759961ADAFCC3008F1F2E /* PostToADNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24759AA1ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADNTests" */;
+			buildPhases = (
+				F24759931ADAFCC3008F1F2E /* Sources */,
+				F24759941ADAFCC3008F1F2E /* Frameworks */,
+				F24759951ADAFCC3008F1F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F247599A1ADAFCC4008F1F2E /* PBXTargetDependency */,
+				F247599C1ADAFCC4008F1F2E /* PBXTargetDependency */,
+			);
+			name = PostToADNTests;
+			productName = PostToADNTests;
+			productReference = F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F24759B91ADB01CD008F1F2E /* KeychainAccess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24759D31ADB01CE008F1F2E /* Build configuration list for PBXNativeTarget "KeychainAccess" */;
+			buildPhases = (
+				F24759B51ADB01CD008F1F2E /* Sources */,
+				F24759B61ADB01CD008F1F2E /* Frameworks */,
+				F24759B71ADB01CD008F1F2E /* Headers */,
+				F24759B81ADB01CD008F1F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainAccess;
+			productName = KeychainAccess;
+			productReference = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F24759C31ADB01CD008F1F2E /* KeychainAccessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24759D61ADB01CE008F1F2E /* Build configuration list for PBXNativeTarget "KeychainAccessTests" */;
+			buildPhases = (
+				F24759C01ADB01CD008F1F2E /* Sources */,
+				F24759C11ADB01CD008F1F2E /* Frameworks */,
+				F24759C21ADB01CD008F1F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F24759C71ADB01CD008F1F2E /* PBXTargetDependency */,
+				F24759C91ADB01CD008F1F2E /* PBXTargetDependency */,
+			);
+			name = KeychainAccessTests;
+			productName = KeychainAccessTests;
+			productReference = F24759C41ADB01CD008F1F2E /* KeychainAccessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +467,20 @@
 						CreatedOnToolsVersion = 6.3;
 					};
 					F247596F1ADA7C9A008F1F2E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F247595D1ADA7C9A008F1F2E;
+					};
+					F247598C1ADAFCC3008F1F2E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					F24759961ADAFCC3008F1F2E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F247595D1ADA7C9A008F1F2E;
+					};
+					F24759B91ADB01CD008F1F2E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					F24759C31ADB01CD008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = F247595D1ADA7C9A008F1F2E;
 					};
@@ -180,6 +501,10 @@
 			targets = (
 				F247595D1ADA7C9A008F1F2E /* Poster */,
 				F247596F1ADA7C9A008F1F2E /* PosterTests */,
+				F247598C1ADAFCC3008F1F2E /* PostToADN */,
+				F24759961ADAFCC3008F1F2E /* PostToADNTests */,
+				F24759B91ADB01CD008F1F2E /* KeychainAccess */,
+				F24759C31ADB01CD008F1F2E /* KeychainAccessTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +526,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F247598B1ADAFCC3008F1F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759951ADAFCC3008F1F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759B81ADB01CD008F1F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759C21ADB01CD008F1F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,7 +561,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */,
 				F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */,
+				F24759871ADA9C2E008F1F2E /* WebLoginViewController.swift in Sources */,
 				F24759641ADA7C9A008F1F2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +572,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24759771ADA7C9A008F1F2E /* PosterTests.swift in Sources */,
+				F24759851ADA92F3008F1F2E /* APICommunicatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759881ADAFCC3008F1F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759B41ADB0042008F1F2E /* RequestFactory.swift in Sources */,
+				F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */,
+				F24759B11ADB0042008F1F2E /* ADNAPICommunicator.swift in Sources */,
+				F24759B31ADB0042008F1F2E /* PostService.swift in Sources */,
+				F24759B21ADB0042008F1F2E /* ImageService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759931ADAFCC3008F1F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759A11ADAFCC4008F1F2E /* PostToADNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759B51ADB01CD008F1F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759DA1ADB0268008F1F2E /* KeychainAccess.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24759C01ADB01CD008F1F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24759CE1ADB01CE008F1F2E /* KeychainAccessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +619,36 @@
 			isa = PBXTargetDependency;
 			target = F247595D1ADA7C9A008F1F2E /* Poster */;
 			targetProxy = F24759711ADA7C9A008F1F2E /* PBXContainerItemProxy */;
+		};
+		F247599A1ADAFCC4008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F247598C1ADAFCC3008F1F2E /* PostToADN */;
+			targetProxy = F24759991ADAFCC4008F1F2E /* PBXContainerItemProxy */;
+		};
+		F247599C1ADAFCC4008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F247595D1ADA7C9A008F1F2E /* Poster */;
+			targetProxy = F247599B1ADAFCC4008F1F2E /* PBXContainerItemProxy */;
+		};
+		F24759A31ADAFCC4008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F247598C1ADAFCC3008F1F2E /* PostToADN */;
+			targetProxy = F24759A21ADAFCC4008F1F2E /* PBXContainerItemProxy */;
+		};
+		F24759C71ADB01CD008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F24759B91ADB01CD008F1F2E /* KeychainAccess */;
+			targetProxy = F24759C61ADB01CD008F1F2E /* PBXContainerItemProxy */;
+		};
+		F24759C91ADB01CD008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F247595D1ADA7C9A008F1F2E /* Poster */;
+			targetProxy = F24759C81ADB01CD008F1F2E /* PBXContainerItemProxy */;
+		};
+		F24759D01ADB01CE008F1F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F24759B91ADB01CD008F1F2E /* KeychainAccess */;
+			targetProxy = F24759CF1ADB01CE008F1F2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -361,6 +785,7 @@
 				INFOPLIST_FILE = PosterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
 			};
 			name = Debug;
@@ -369,12 +794,169 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = PosterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
+			};
+			name = Release;
+		};
+		F24759A71ADAFCC4008F1F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PostToADN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F24759A81ADAFCC4008F1F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PostToADN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F24759AB1ADAFCC4008F1F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PostToADNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
+			};
+			name = Debug;
+		};
+		F24759AC1ADAFCC4008F1F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PostToADNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
+			};
+			name = Release;
+		};
+		F24759D41ADB01CE008F1F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeychainAccess/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F24759D51ADB01CE008F1F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = KeychainAccess/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F24759D71ADB01CE008F1F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeychainAccessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
+			};
+			name = Debug;
+		};
+		F24759D81ADB01CE008F1F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeychainAccessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
@@ -400,6 +982,7 @@
 				F247597C1ADA7C9A008F1F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F247597D1ADA7C9A008F1F2E /* Build configuration list for PBXNativeTarget "PosterTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +991,43 @@
 				F247597F1ADA7C9A008F1F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24759A61ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24759A71ADAFCC4008F1F2E /* Debug */,
+				F24759A81ADAFCC4008F1F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24759AA1ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24759AB1ADAFCC4008F1F2E /* Debug */,
+				F24759AC1ADAFCC4008F1F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24759D31ADB01CE008F1F2E /* Build configuration list for PBXNativeTarget "KeychainAccess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24759D41ADB01CE008F1F2E /* Debug */,
+				F24759D51ADB01CE008F1F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24759D61ADB01CE008F1F2E /* Build configuration list for PBXNativeTarget "KeychainAccessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24759D71ADB01CE008F1F2E /* Debug */,
+				F24759D81ADB01CE008F1F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
