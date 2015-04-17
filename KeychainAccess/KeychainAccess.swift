@@ -40,7 +40,7 @@ public class KeychainAccess {
         return NSString(format: kSecReturnData) as! String
     }
     
-    public class func setPassword(password: String, account: String, service: String = "kDDHDefaultService") {
+    public class func setPassword(password: String, account: String, service: String = "de.dasdom.poster") {
         var secret: NSData = password.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         let objects: Array = [secClassGenericPassword(), service, account, secret]
         
@@ -53,7 +53,7 @@ public class KeychainAccess {
         let status = SecItemAdd(query as CFDictionaryRef, nil)
     }
     
-    public class func deletePasswortForAccount(account: String, service: String = "kDDHDefaultService") {
+    public class func deletePasswortForAccount(account: String, service: String = "de.dasdom.poster") {
         let objects: Array = [secClassGenericPassword(), service, account]
         
         let keys: Array = [secClass(), secAttrService(), secAttrAccount()]
@@ -66,7 +66,7 @@ public class KeychainAccess {
 
     }
     
-    public class func passwordForAccount(account: String, service: String = "kDDHDefaultService") -> String? {
+    public class func passwordForAccount(account: String, service: String = "de.dasdom.poster") -> String? {
         
         let queryAttributes = NSDictionary(objects: [secClassGenericPassword(), service, account, true], forKeys: [secClass(), secAttrService(), secAttrAccount(), secReturnData()])
         

@@ -29,6 +29,7 @@
 		F24759D21ADB01CE008F1F2E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F24759DA1ADB0268008F1F2E /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759D91ADB0268008F1F2E /* KeychainAccess.swift */; };
 		F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759DB1ADDA633008F1F2E /* BackgroundView.swift */; };
+		F2B001A31AE1991700F806CE /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
 		F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B001A31AE1991700F806CE /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +352,7 @@
 				F247595B1ADA7C9A008F1F2E /* Frameworks */,
 				F247595C1ADA7C9A008F1F2E /* Resources */,
 				F24759A91ADAFCC4008F1F2E /* Embed Frameworks */,
+				F2B001A41AE19A9100F806CE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -555,6 +558,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F2B001A41AE19A9100F806CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F247595A1ADA7C9A008F1F2E /* Sources */ = {

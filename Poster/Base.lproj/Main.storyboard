@@ -773,6 +773,9 @@
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="440" height="169"/>
                                                     <size key="maxSize" width="463" height="10000000"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XfG-lQ-9wD" id="fCf-Wb-amr"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -812,14 +815,24 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="X0r-p6-vE0"/>
                             </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-YY-78Q">
+                                <rect key="frame" x="358" y="23" width="38" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="256" id="LAj-cP-Mnh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nbh-md-NnB" secondAttribute="trailing" id="3c9-5T-OpK"/>
                             <constraint firstItem="GYV-6X-yge" firstAttribute="centerY" secondItem="46w-2N-h5i" secondAttribute="centerY" constant="-0.5" id="4G8-g3-aro"/>
                             <constraint firstItem="nbh-md-NnB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6Uj-Na-Yb3"/>
                             <constraint firstAttribute="bottom" secondItem="mHN-bO-uTr" secondAttribute="bottom" constant="20" id="8i3-na-ki7"/>
+                            <constraint firstItem="mHN-bO-uTr" firstAttribute="leading" secondItem="4dk-YY-78Q" secondAttribute="trailing" constant="10" id="9bj-U9-S0l"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="bottom" constant="20" id="Rev-8Q-zn7"/>
                             <constraint firstAttribute="trailing" secondItem="mHN-bO-uTr" secondAttribute="trailing" constant="20" id="Tqo-2U-Ic2"/>
+                            <constraint firstItem="mHN-bO-uTr" firstAttribute="centerY" secondItem="4dk-YY-78Q" secondAttribute="centerY" constant="1" id="gMv-AG-jM9"/>
                             <constraint firstItem="46w-2N-h5i" firstAttribute="leading" secondItem="GYV-6X-yge" secondAttribute="trailing" constant="8" id="nEy-NR-W05"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="centerY" secondItem="GYV-6X-yge" secondAttribute="centerY" id="uwr-3R-3CV"/>
                             <constraint firstItem="GYV-6X-yge" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="w8W-3Y-SaP"/>
@@ -827,6 +840,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="characterCountLabel" destination="4dk-YY-78Q" id="ZBe-cB-d93"/>
                         <outlet property="imageView" destination="46w-2N-h5i" id="gpI-2v-79O"/>
                         <outlet property="textView" destination="HXZ-KK-jaC" id="kzl-J7-M8u"/>
                     </connections>

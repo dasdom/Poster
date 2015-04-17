@@ -11,21 +11,14 @@ import PostToADN
 import KeychainAccess
 import Quartz
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextViewDelegate {
   
   @IBOutlet var textView: NSTextView!
   var accessToken: String?
   var image: NSImage?
   
   @IBOutlet weak var imageView: NSImageView!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    if accessToken == nil {
-      accessToken = KeychainAccess.passwordForAccount("AccessToken")
-    }
-  }
+  @IBOutlet weak var characterCountLabel: NSTextField!
   
   override var representedObject: AnyObject? {
     didSet {
@@ -33,12 +26,43 @@ class ViewController: NSViewController {
     }
   }
   
+  func textView(textView: NSTextView, shouldChangeTextInRange affectedCharRange: NSRange, replacementString: String) -> Bool {
+    let numberOfCharacters = count(textView.string!) - affectedCharRange.length + count(replacementString)
+    characterCountLabel.stringValue = "\(256-numberOfCharacters)"
+    return true
+  }
+  
   @IBAction func post(sender: NSButton) {
     
     println("post")
     
     if accessToken == nil {
+      accessToken = KeychainAccess.passwordForAccount("AccessToken")
+    }
+    
+    if accessToken == nil {
       println("no accessToken")
+//      let error = NSError(domain: "de.dasdom.accessTokenDomain", code: 100, userInfo: [NSLocalizedDescriptionKey: "Please log in"])
+      let alert = NSAlert()
+      alert.messageText = "Please log in"
+      alert.informativeText = "You have to log into App.net via the Login button to post ot App.net"
+      alert.runModal()
+      return
+    }
+    
+    if count(textView.string!) > 256 {
+      let alert = NSAlert()
+      alert.messageText = "Text to long"
+      alert.informativeText = "The text is to long to be posted on App.net."
+      alert.runModal()
+      return
+    }
+    
+    if count(textView.string!) < 1 {
+      let alert = NSAlert()
+      alert.messageText = "Text to short"
+      alert.informativeText = "Please insert at least one character."
+      alert.runModal()
       return
     }
     
