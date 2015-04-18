@@ -103,6 +103,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
     adnApiCommunicator.postText(textView.string!, linksArray: [], accessToken: accessToken!, image: image) { () -> () in
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
         self.textView.string = ""
+        self.image = nil
+        self.imageView.image = nil
       });
     }
     
