@@ -96,4 +96,15 @@ public class RequestFactory {
         avatarRequest.HTTPMethod = "GET"
         return avatarRequest
     }
+    
+    public class func personalizedStreamRequestWithAccessToken(accessToken: String) -> NSURLRequest {
+        let personlizedStreamRequest = NSMutableURLRequest(URL: NSURL(string: "https://api.app.net/posts/stream")!)
+        
+        let authorizationString = "Bearer " + accessToken;
+        personlizedStreamRequest.addValue(authorizationString, forHTTPHeaderField: "Authorization")
+        
+        personlizedStreamRequest.HTTPMethod = "GET"
+        
+        return personlizedStreamRequest
+    }
 }
