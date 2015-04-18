@@ -73,28 +73,22 @@ class ViewController: NSViewController, NSTextViewDelegate {
       accessToken = KeychainAccess.passwordForAccount("AccessToken")
     }
     
+    let alertInfo: (message: String, info: String)?
     if accessToken == nil {
       println("no accessToken")
-//      let error = NSError(domain: "de.dasdom.accessTokenDomain", code: 100, userInfo: [NSLocalizedDescriptionKey: "Please log in"])
-      let alert = NSAlert()
-      alert.messageText = "Please log in"
-      alert.informativeText = "You have to log into App.net via the Login button to post ot App.net"
-      alert.runModal()
-      return
+      alertInfo = ("Please log in", "You have to log into App.net via the Login button to post ot App.net")
+    } else if count(textView.string!) > 256 {
+      alertInfo = ("Text to long", "The text is to long to be posted on App.net.")
+    } else if count(textView.string!) < 1 {
+      alertInfo = ("Text to short", "Please insert at least one character.")
+    } else {
+        alertInfo = nil
     }
     
-    if count(textView.string!) > 256 {
+    if let alertInfo = alertInfo {
       let alert = NSAlert()
-      alert.messageText = "Text to long"
-      alert.informativeText = "The text is to long to be posted on App.net."
-      alert.runModal()
-      return
-    }
-    
-    if count(textView.string!) < 1 {
-      let alert = NSAlert()
-      alert.messageText = "Text to short"
-      alert.informativeText = "Please insert at least one character."
+      alert.messageText = alertInfo.message
+      alert.informativeText = alertInfo.info
       alert.runModal()
       return
     }
