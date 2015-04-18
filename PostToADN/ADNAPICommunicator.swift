@@ -62,4 +62,15 @@ public class ADNAPICommunicator: NSObject, NSURLSessionDelegate, NSURLSessionDat
 
     }
     
+    public func avatarWithAccessToken(accessToken: String, completion: (NSImage?) -> ()) {
+        let request = RequestFactory.avatarRequestWithAccessToken(accessToken)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            let image = NSImage(data: data)
+            completion(image)
+        })
+        task.resume()
+    }
+    
 }

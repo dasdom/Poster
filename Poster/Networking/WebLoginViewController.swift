@@ -61,6 +61,7 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
       let length = title.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
       if length > 30 {
         KeychainAccess.setPassword(title, account: "AccessToken")
+        NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
         dismissViewController(self)
       }
     }

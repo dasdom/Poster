@@ -11,6 +11,8 @@ import PostToADN
 import KeychainAccess
 import Quartz
 
+let DidLoginOrLogoutNotification = "DidLoginOrLogoutNotification"
+
 class ViewController: NSViewController, NSTextViewDelegate {
   
   @IBOutlet var textView: NSTextView!
@@ -20,11 +22,42 @@ class ViewController: NSViewController, NSTextViewDelegate {
   @IBOutlet weak var imageView: NSImageView!
   @IBOutlet weak var characterCountLabel: NSTextField!
   
+    @IBOutlet weak var avatarImageView: NSImageView!
+    
   override var representedObject: AnyObject? {
     didSet {
       // Update the view, if already loaded.
     }
   }
+    
+    override func viewDidLoad() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLoginOrLogout:", name: DidLoginOrLogoutNotification, object: nil)
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        updateView()
+    }
+    
+    func updateView() {
+        if accessToken == nil {
+            accessToken = KeychainAccess.passwordForAccount("AccessToken")
+        }
+        
+        if let accessToken = accessToken {
+            let adnApiCommunicator = ADNAPICommunicator()
+            adnApiCommunicator.avatarWithAccessToken(accessToken, completion: { (image) -> () in
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in                    
+                    self.avatarImageView.image = image
+                    self.textView.string = ""
+                })
+            })
+        } else {
+            self.avatarImageView.image = nil
+            self.textView.string = "Please log in."
+        }
+    }
   
   func textView(textView: NSTextView, shouldChangeTextInRange affectedCharRange: NSRange, replacementString: String) -> Bool {
     let numberOfCharacters = count(textView.string!) - affectedCharRange.length + count(replacementString)
@@ -91,5 +124,12 @@ class ViewController: NSViewController, NSTextViewDelegate {
     }
   }
   
+}
+
+extension ViewController {
+    func didLoginOrLogout(sender: NSNotification) {
+        accessToken = nil
+        updateView()
+    }
 }
 

@@ -88,4 +88,12 @@ public class RequestFactory {
         return imageUploadRequest
     }
   
+    public class func avatarRequestWithAccessToken(accessToken: String) -> NSURLRequest {
+        var avatarRequest = NSMutableURLRequest(URL: NSURL(string: "https://api.app.net/users/me/avatar")!)
+        let authorizationString = "Bearer " + accessToken;
+        avatarRequest.addValue(authorizationString, forHTTPHeaderField: "Authorization")
+        
+        avatarRequest.HTTPMethod = "GET"
+        return avatarRequest
+    }
 }
