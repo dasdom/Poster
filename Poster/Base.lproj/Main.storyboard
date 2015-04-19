@@ -21,7 +21,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="0AP-vL-EqV" kind="show" id="XfD-Ug-VpF"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -659,9 +663,9 @@
                     <window key="window" title="Poster" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="514" y="558" width="480" height="270"/>
+                        <rect key="contentRect" x="514" y="558" width="480" height="200"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="300" height="270"/>
+                        <value key="minSize" type="size" width="400" height="200"/>
                         <toolbar key="toolbar" implicitIdentifier="1F4B9D12-0261-40E6-B37D-55F2941E68AB" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="eaj-Ue-hnF">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="DEE50A5D-5A94-4B57-B333-FEFF3464AC40" label="Login" paletteLabel="" id="ldu-Hy-Spr">
@@ -698,39 +702,79 @@
             </objects>
             <point key="canvasLocation" x="69" y="309"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="y6a-WH-zly">
+        <!--Tab View Controller-->
+        <scene sceneID="18u-Z0-kFX">
             <objects>
-                <viewController id="jzJ-xl-q6z" sceneMemberID="viewController">
-                    <view key="view" id="B9g-mG-NzJ">
-                        <rect key="frame" x="0.0" y="0.0" width="136" height="94"/>
+                <tabViewController tabStyle="toolbar" id="0AP-vL-EqV" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="pTp-aD-Aap"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Xt4-Np-eNm">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="Oct-AD-lsZ" kind="relationship" relationship="tabItems" id="Aer-5l-rS2"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="VnF-mo-dVD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-160"/>
+        </scene>
+        <!--Crosspost-->
+        <scene sceneID="X9f-4V-nIr">
+            <objects>
+                <viewController title="Crosspost" id="Oct-AD-lsZ" customClass="CrossPostPreferenceViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Tz4-Wq-Qvs">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-8B-qfV">
-                                <rect key="frame" x="20" y="52" width="96" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="15n-zI-gmb">
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-kd-PgS">
+                                <rect key="frame" x="163" y="231" width="34" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="F8M-ZK-Wft">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="dR9-mE-v4q"/>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fWv-Mg-4pr">
+                                <rect key="frame" x="55" y="236" width="104" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Twitter Account:" id="QEV-Rj-icK">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1v-dw-e5x">
-                                <rect key="frame" x="20" y="20" width="96" height="22"/>
-                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="4Yt-N3-XZf">
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="eOo-lY-tKc">
+                                <rect key="frame" x="18" y="264" width="146" height="18"/>
+                                <buttonCell key="cell" type="check" title="Crosspost to Twitter" bezelStyle="regularSquare" imagePosition="left" inset="2" id="GVb-Ju-7Yp">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <allowedInputSourceLocales>
-                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
-                                    </allowedInputSourceLocales>
-                                </secureTextFieldCell>
-                            </secureTextField>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crossPostCheckBoxChanged:" target="Oct-AD-lsZ" id="Njc-9i-ZrE"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="hRK-kd-PgS" firstAttribute="leading" secondItem="fWv-Mg-4pr" secondAttribute="trailing" constant="8" id="97G-Zi-6Lc"/>
+                            <constraint firstItem="fWv-Mg-4pr" firstAttribute="top" secondItem="eOo-lY-tKc" secondAttribute="bottom" constant="13" id="gw3-is-9Kv"/>
+                            <constraint firstItem="eOo-lY-tKc" firstAttribute="leading" secondItem="Tz4-Wq-Qvs" secondAttribute="leading" constant="20" id="mUZ-hO-xJ4"/>
+                            <constraint firstItem="fWv-Mg-4pr" firstAttribute="leading" secondItem="Tz4-Wq-Qvs" secondAttribute="leading" constant="57" id="mcE-eQ-gdV"/>
+                            <constraint firstItem="eOo-lY-tKc" firstAttribute="top" secondItem="Tz4-Wq-Qvs" secondAttribute="top" constant="20" id="tWd-2b-pur"/>
+                            <constraint firstItem="fWv-Mg-4pr" firstAttribute="centerY" secondItem="hRK-kd-PgS" secondAttribute="centerY" id="yva-rV-qyr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="crosspostToTwitterCheckBox" destination="eOo-lY-tKc" id="oZf-uJ-AD4"/>
+                        <outlet property="twitterPopUpButton" destination="hRK-kd-PgS" id="pPF-0h-h25"/>
+                    </connections>
                 </viewController>
-                <customObject id="WMa-N4-oEv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="xAb-tU-xzQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522" y="0.0"/>
+            <point key="canvasLocation" x="1340" y="-160"/>
         </scene>
         <!--Login-->
         <scene sceneID="62T-zz-pcb">
@@ -802,12 +846,12 @@ DQ
                                         </scroller>
                                     </scrollView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80X-nM-Dnt">
-                                        <rect key="frame" x="20" y="141" width="48" height="48"/>
+                                        <rect key="frame" x="17" y="138" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="2xU-bG-oz7"/>
                                             <constraint firstAttribute="height" constant="48" id="Hlq-j5-hbL"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="qZE-P7-tsG"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="qZE-P7-tsG"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -845,6 +889,14 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-H0-ySl">
+                                <rect key="frame" x="221" y="23" width="38" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="hKJ-hm-ere">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nbh-md-NnB" secondAttribute="trailing" id="3c9-5T-OpK"/>
@@ -852,6 +904,8 @@ DQ
                             <constraint firstItem="nbh-md-NnB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6Uj-Na-Yb3"/>
                             <constraint firstAttribute="bottom" secondItem="mHN-bO-uTr" secondAttribute="bottom" constant="20" id="8i3-na-ki7"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="leading" secondItem="4dk-YY-78Q" secondAttribute="trailing" constant="10" id="9bj-U9-S0l"/>
+                            <constraint firstAttribute="centerX" secondItem="2b7-H0-ySl" secondAttribute="centerX" id="Jyl-37-9qS"/>
+                            <constraint firstItem="4dk-YY-78Q" firstAttribute="centerY" secondItem="2b7-H0-ySl" secondAttribute="centerY" id="NV6-BP-bth"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="bottom" constant="20" id="Rev-8Q-zn7"/>
                             <constraint firstAttribute="trailing" secondItem="mHN-bO-uTr" secondAttribute="trailing" constant="20" id="Tqo-2U-Ic2"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="centerY" secondItem="4dk-YY-78Q" secondAttribute="centerY" constant="1" id="gMv-AG-jM9"/>
@@ -865,6 +919,8 @@ DQ
                         <outlet property="avatarImageView" destination="80X-nM-Dnt" id="Pvj-ER-0us"/>
                         <outlet property="characterCountLabel" destination="4dk-YY-78Q" id="ZBe-cB-d93"/>
                         <outlet property="imageView" destination="46w-2N-h5i" id="gpI-2v-79O"/>
+                        <outlet property="postButton" destination="mHN-bO-uTr" id="nCz-qg-IHG"/>
+                        <outlet property="statusLabel" destination="2b7-H0-ySl" id="puZ-ac-MzK"/>
                         <outlet property="textView" destination="HXZ-KK-jaC" id="kzl-J7-M8u"/>
                     </connections>
                 </viewController>

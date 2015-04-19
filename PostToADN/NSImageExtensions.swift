@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension NSImage {
-  func jpegDataWithCompressionFactor(compressionFactor: Double) -> NSData? {
+public extension NSImage {
+  public func jpegDataWithCompressionFactor(compressionFactor: Double) -> NSData? {
     if var imageData = TIFFRepresentation {
       let imageRep = NSBitmapImageRep(data: imageData)
       let imageProperties = [NSImageCompressionFactor: compressionFactor]
