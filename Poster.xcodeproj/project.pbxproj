@@ -12,6 +12,7 @@
 		551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */; };
 		551FB68B1AE3CB7C00EEAC3D /* StringURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */; };
 		551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */; };
+		5596AD671AECBF0900A9F76D /* ClientId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596AD661AECBF0900A9F76D /* ClientId.swift */; };
 		55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8944F1AE590B600695F58 /* LinkExtractor.swift */; };
 		F24759641ADA7C9A008F1F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759631ADA7C9A008F1F2E /* AppDelegate.swift */; };
 		F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759651ADA7C9A008F1F2E /* ViewController.swift */; };
@@ -112,6 +113,7 @@
 		551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterWindowController.swift; sourceTree = "<group>"; };
 		551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringURLExtension.swift; path = ../StringURLExtension.swift; sourceTree = "<group>"; };
 		551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrossPostPreferenceViewController.swift; path = Preferences/CrossPostPreferenceViewController.swift; sourceTree = "<group>"; };
+		5596AD661AECBF0900A9F76D /* ClientId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientId.swift; path = Networking/ClientId.swift; sourceTree = "<group>"; };
 		55F8944F1AE590B600695F58 /* LinkExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkExtractor.swift; sourceTree = "<group>"; };
 		F247595E1ADA7C9A008F1F2E /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759621ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */,
+				5596AD661AECBF0900A9F76D /* ClientId.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */,
 				551FB68B1AE3CB7C00EEAC3D /* StringURLExtension.swift in Sources */,
 				F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */,
+				5596AD671AECBF0900A9F76D /* ClientId.swift in Sources */,
 				550BCAD41AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift in Sources */,
 				551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */,
 				551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */,
