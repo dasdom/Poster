@@ -9,7 +9,7 @@
 import Cocoa
 import Accounts
 
-let kActiveAccountIdKey = "kActiveAccountIdKey"
+let kActiveTwitterAccountIdKey = "kActiveTwitterAccountIdKey"
 let kCrossPostStateChangedNotification = "kCrossPostStateChangedNotification"
 
 class CrossPostPreferenceViewController: NSViewController {
@@ -40,6 +40,13 @@ class CrossPostPreferenceViewController: NSViewController {
                 }
             })
             })
+        
+        let accountIdentifer = NSUserDefaults.standardUserDefaults().stringForKey(kActiveTwitterAccountIdKey)
+        if accountIdentifer != nil {
+            crosspostToTwitterCheckBox.state = NSOnState
+        } else {
+            crosspostToTwitterCheckBox.state = NSOffState
+        }
 
     }
     
@@ -54,13 +61,13 @@ extension CrossPostPreferenceViewController {
             if let allAccounts = self.accounts {
                 for account in allAccounts as! [ACAccount] {
                     if account.username == twitterPopUpButton.selectedItem!.title {
-                        NSUserDefaults.standardUserDefaults().setObject(account.identifier, forKey: kActiveAccountIdKey)
+                        NSUserDefaults.standardUserDefaults().setObject(account.identifier, forKey: kActiveTwitterAccountIdKey)
                         break
                     }
                 }
             }
         } else {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey(kActiveAccountIdKey)
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(kActiveTwitterAccountIdKey)
         }
         NSUserDefaults.standardUserDefaults().synchronize()
         

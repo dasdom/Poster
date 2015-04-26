@@ -73,4 +73,21 @@ public class ADNAPICommunicator: NSObject, NSURLSessionDelegate, NSURLSessionDat
         task.resume()
     }
     
+    public func loggenInUserWithAccessToken(accessToken: String, completion: (User) -> ()) {
+        let request = RequestFactory.loggedInUserInfoRequestWithAccessToken(accessToken)
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            var jsonError: NSError?
+            let rawResponseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! [String:AnyObject]
+//            println("dataDict: \(rawResponseDictionary)")
+            
+            let dataDictionary = rawResponseDictionary["data"] as! [String:AnyObject]
+            let user = User(dataDictionary: dataDictionary)
+            
+            completion(user)
+        })
+        task.resume()
+    }
+    
 }

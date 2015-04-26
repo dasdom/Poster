@@ -9,6 +9,10 @@
 import Cocoa
 import WebKit
 import KeychainAccess
+import PostToADN
+
+let kAccountNameArrayKey = "kAccountNameArrayKey"
+let kActiveAccountNameKey = "kActiveAccountNameKey"
 
 class WebLoginViewController: NSViewController, WKNavigationDelegate {
   
@@ -21,7 +25,19 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let request = NSURLRequest(URL: NSURL(string: "https://account.app.net/oauth/authorize?client_id=rj4NmMD2y6Utf5aqnjuHVS3hchgAFsta&response_type=token&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=write_post")!)
+    let request = NSMutableURLRequest(URL: NSURL(string: "https://account.app.net/oauth/authenticate?client_id=\(kClientId)&response_type=token&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=write_post")!)
+    
+//    request.HTTPShouldHandleCookies = false
+    
+//    let storage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+//    if let allCookies = storage.cookies {
+//        for cookie in allCookies as! [NSHTTPCookie] {
+//            println("cookie domain: \(cookie.domain)")
+//            if cookie.domain == "account.app.net" {
+//                storage.deleteCookie(cookie)
+//            }
+//        }
+//    }
     
     webView = WKWebView(frame: NSRect.zeroRect)
     webView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +68,7 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
   func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
     progressIndicator.startAnimation(self)
   }
-  
+    
   func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
     
     progressIndicator.stopAnimation(self)
@@ -60,12 +76,35 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
     if let title = webView.title {
       let length = title.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
       if length > 30 {
-        KeychainAccess.setPassword(title, account: "AccessToken")
-        NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
-        dismissViewController(self)
+        let accessToken = title
+        
+        webView.loadHTMLString("Fetching username", baseURL: nil)
+        
+        let apiCommunicator = ADNAPICommunicator()
+        apiCommunicator.loggenInUserWithAccessToken(accessToken) { user in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let user = user
+                println("username: \(user.username)")
+                
+                let accountKey = "AccessToken_\(user.username)"
+                KeychainAccess.setPassword(accessToken, account: accountKey)
+                
+                var array = NSUserDefaults.standardUserDefaults().arrayForKey(kAccountNameArrayKey)
+                if array == nil {
+                    array = [String]()
+                }
+                
+                array!.append(user.username)
+                NSUserDefaults.standardUserDefaults().setObject(array!, forKey: kAccountNameArrayKey)
+                NSUserDefaults.standardUserDefaults().setObject(user.username, forKey: kActiveAccountNameKey)
+                NSUserDefaults.standardUserDefaults().synchronize()
+                
+                NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
+                self.dismissViewController(self)
+            });
+        }
       }
     }
   }
-
   
 }

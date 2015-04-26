@@ -12,6 +12,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
+    @IBAction func nextAccount(sender: NSMenuItem) {
+        NSNotificationCenter.defaultCenter().postNotificationName(SwitchToNextAccountNotification, object: self, userInfo: nil)
+    }
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550BCAD41AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCAD31AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift */; };
+		5517E56F1AEA3897000E157E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517E56E1AEA3897000E157E /* User.swift */; };
 		551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */; };
 		551FB68B1AE3CB7C00EEAC3D /* StringURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */; };
 		551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */; };
+		55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8944F1AE590B600695F58 /* LinkExtractor.swift */; };
 		F24759641ADA7C9A008F1F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759631ADA7C9A008F1F2E /* AppDelegate.swift */; };
 		F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759651ADA7C9A008F1F2E /* ViewController.swift */; };
 		F24759681ADA7C9A008F1F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24759671ADA7C9A008F1F2E /* Images.xcassets */; };
@@ -104,9 +107,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		550BCAD31AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADNAccountsPreferenceViewController.swift; path = Preferences/ADNAccountsPreferenceViewController.swift; sourceTree = "<group>"; };
+		5517E56E1AEA3897000E157E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterWindowController.swift; sourceTree = "<group>"; };
-		551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringURLExtension.swift; sourceTree = "<group>"; };
+		551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringURLExtension.swift; path = ../StringURLExtension.swift; sourceTree = "<group>"; };
 		551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrossPostPreferenceViewController.swift; path = Preferences/CrossPostPreferenceViewController.swift; sourceTree = "<group>"; };
+		55F8944F1AE590B600695F58 /* LinkExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkExtractor.swift; sourceTree = "<group>"; };
 		F247595E1ADA7C9A008F1F2E /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759621ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24759631ADA7C9A008F1F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +195,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550BCAD21AEA40D700E462D2 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */,
+				550BCAD31AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		55397AE41AE804DF00325EC1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		55397AE51AE804EB00325EC1 /* Posting */ = {
+			isa = PBXGroup;
+			children = (
+				F24759651ADA7C9A008F1F2E /* ViewController.swift */,
+				F24759DB1ADDA633008F1F2E /* BackgroundView.swift */,
+			);
+			name = Posting;
+			sourceTree = "<group>";
+		};
+		55F8944E1AE590B600695F58 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */,
+				55F8944F1AE590B600695F58 /* LinkExtractor.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
 		F24759551ADA7C9A008F1F2E = {
 			isa = PBXGroup;
 			children = (
@@ -220,11 +261,10 @@
 			children = (
 				F24759631ADA7C9A008F1F2E /* AppDelegate.swift */,
 				551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */,
-				F24759651ADA7C9A008F1F2E /* ViewController.swift */,
-				F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */,
-				F24759DB1ADDA633008F1F2E /* BackgroundView.swift */,
-				551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */,
-				551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */,
+				550BCAD21AEA40D700E462D2 /* Preferences */,
+				55397AE41AE804DF00325EC1 /* Login */,
+				55397AE51AE804EB00325EC1 /* Posting */,
+				55F8944E1AE590B600695F58 /* HelperClasses */,
 				F24759691ADA7C9A008F1F2E /* Main.storyboard */,
 				F24759671ADA7C9A008F1F2E /* Images.xcassets */,
 				F24759611ADA7C9A008F1F2E /* Supporting Files */,
@@ -266,6 +306,7 @@
 				F24759AF1ADB0042008F1F2E /* PostService.swift */,
 				F24759B01ADB0042008F1F2E /* RequestFactory.swift */,
 				F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */,
+				5517E56E1AEA3897000E157E /* User.swift */,
 				F247598F1ADAFCC3008F1F2E /* Supporting Files */,
 			);
 			path = PostToADN;
@@ -589,8 +630,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */,
 				551FB68B1AE3CB7C00EEAC3D /* StringURLExtension.swift in Sources */,
 				F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */,
+				550BCAD41AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift in Sources */,
 				551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */,
 				551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */,
 				F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */,
@@ -613,6 +656,7 @@
 			files = (
 				F24759B41ADB0042008F1F2E /* RequestFactory.swift in Sources */,
 				F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */,
+				5517E56F1AEA3897000E157E /* User.swift in Sources */,
 				F24759B11ADB0042008F1F2E /* ADNAPICommunicator.swift in Sources */,
 				F24759B31ADB0042008F1F2E /* PostService.swift in Sources */,
 				F24759B21ADB0042008F1F2E /* ImageService.swift in Sources */,

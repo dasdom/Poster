@@ -19,7 +19,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
     @IBOutlet var textView: NSTextView!
     var accessToken: String?
-    var image: NSImage?
+    var username: String?
+//    var image: NSImage?
     
     @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var characterCountLabel: NSTextField!
@@ -46,12 +47,15 @@ class ViewController: NSViewController, NSTextViewDelegate {
         super.viewWillAppear()
         
         updateView()
+        updatePostButton()
         accountStore = ACAccountStore()
     }
     
     func updateView() {
         if accessToken == nil {
-            accessToken = KeychainAccess.passwordForAccount("AccessToken")
+            if let username = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountNameKey) {
+                accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)")
+            }
         }
         
         if let accessToken = accessToken {
@@ -69,7 +73,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
     }
     
     func updatePostButton() {
-        activeAccountIdentifier = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountIdKey)
+        activeAccountIdentifier = NSUserDefaults.standardUserDefaults().stringForKey(kActiveTwitterAccountIdKey)
         if activeAccountIdentifier == nil {
             postButton.title = "Post"
         } else {
@@ -88,7 +92,9 @@ class ViewController: NSViewController, NSTextViewDelegate {
         println("post")
         
         if accessToken == nil {
-            accessToken = KeychainAccess.passwordForAccount("AccessToken")
+            if let username = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountNameKey) {
+                accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)")
+            }
         }
         
         let alertInfo: (message: String, info: String)?
@@ -111,14 +117,17 @@ class ViewController: NSViewController, NSTextViewDelegate {
             return
         }
         
+        let linkExtractor = LinkExtractor()
+        let (postText, linksArray) = linkExtractor.extractLinks(textView.string!)
+        
         let adnApiCommunicator = ADNAPICommunicator()
         statusLabel.stringValue = "Posting to App.net"
         postButton.enabled = false
-        adnApiCommunicator.postText(textView.string!, linksArray: [], accessToken: accessToken!, image: image) { () -> () in
+        adnApiCommunicator.postText(postText, linksArray: linksArray, accessToken: accessToken!, image: imageView.image) { () -> () in
             
             if self.activeAccountIdentifier != nil {
                 self.statusLabel.stringValue = "Tweeting to Twitter"
-                self.tweetText(self.textView.string!, linksArray: [], accountIdentifier: self.activeAccountIdentifier!, image: self.image, completion: { () -> () in
+                self.tweetText(postText, linksArray: linksArray, accountIdentifier: self.activeAccountIdentifier!, image: self.imageView.image, completion: { () -> () in
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.resetView()
                     });
@@ -135,7 +144,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
     func resetView() {
         textView.string = ""
-        image = nil
+//        image = nil
         imageView.image = nil
         statusLabel.stringValue = ""
         postButton.enabled = true
@@ -153,7 +162,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
         
         if image != nil && returnCode == NSModalResponseOK {
             self.imageView.image = image
-            self.image = image
+//            self.image = image
         }
     }
     
@@ -205,8 +214,8 @@ extension ViewController {
             println("tweetResponse: \(tweetResponse)")
             
             if tweetResponse.statusCode != 200 {
-//                dispatch_async(dispatch_get_main_queue(), {
-//                    
+                dispatch_async(dispatch_get_main_queue(), {
+//
 //                    let alertMessage = "Tweeting didn't work."
 //                    let alert = UIAlertController(title: "There was an error", message: alertMessage, preferredStyle: .Alert)
 //                    let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -216,8 +225,8 @@ extension ViewController {
 //                    
 //                    self.presentViewController(alert, animated: true, completion: nil)
 //                    
-//                    completion()
-//                })
+                    completion()
+                })
                 return
             }
             
@@ -229,8 +238,8 @@ extension ViewController {
                     println("error: \(tweetError)")
                     println("tweetResponse: \(tweetResponse)")
                     
-//                    dispatch_async(dispatch_get_main_queue(), {
-//                        
+                    dispatch_async(dispatch_get_main_queue(), {
+//
 //                        let alertMessage = "Tweet 1: \(tweetOne)" + "\n\n" + "Tweet 2: \(tweetTwo)"
 //                        let alert = UIAlertController(title: "You tweeted two tweets:", message: alertMessage, preferredStyle: .Alert)
 //                        let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -240,8 +249,8 @@ extension ViewController {
 //                        
 //                        self.presentViewController(alert, animated: true, completion: nil)
 //                        
-//                        completion()
-//                    })
+                        completion()
+                    })
                 }
             } else {
                 dispatch_async(dispatch_get_main_queue(), {

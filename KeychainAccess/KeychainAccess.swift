@@ -75,16 +75,16 @@ public class KeychainAccess {
         if status == errSecItemNotFound {
             return nil
         }
-//        if let dataTypeRef = dataTypeRef {
-            let retrievedData : NSData = dataTypeRef!.takeRetainedValue() as! CFDataRef as NSData
+        if let dataTypeRef = dataTypeRef {
+            let retrievedData : NSData = dataTypeRef.takeRetainedValue() as! CFDataRef as NSData
         
 //        if let retrievedData = retrievedData {
             let password = NSString(data: retrievedData, encoding: NSUTF8StringEncoding)
             
             return password as? String
 
-//        }
-//        return nil
+        }
+        return nil
     }
     
 }

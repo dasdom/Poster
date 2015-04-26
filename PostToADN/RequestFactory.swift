@@ -97,6 +97,15 @@ public class RequestFactory {
         return avatarRequest
     }
     
+    public class func loggedInUserInfoRequestWithAccessToken(accessToken: String) -> NSURLRequest {
+        var userInfoRequest = NSMutableURLRequest(URL: NSURL(string: "https://api.app.net/users/me")!)
+        let authorizationString = "Bearer " + accessToken;
+        userInfoRequest.addValue(authorizationString, forHTTPHeaderField: "Authorization")
+        
+        userInfoRequest.HTTPMethod == "GET"
+        return userInfoRequest
+    }
+    
     public class func personalizedStreamRequestWithAccessToken(accessToken: String) -> NSURLRequest {
         let personlizedStreamRequest = NSMutableURLRequest(URL: NSURL(string: "https://api.app.net/posts/stream")!)
         
