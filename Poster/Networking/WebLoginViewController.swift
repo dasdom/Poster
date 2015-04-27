@@ -89,15 +89,17 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
                 let accountKey = "AccessToken_\(user.username)"
                 KeychainAccess.setPassword(accessToken, account: accountKey)
                 
-                var array = NSUserDefaults.standardUserDefaults().arrayForKey(kAccountNameArrayKey)
+                let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+                var array = userDefaults?.arrayForKey(kAccountNameArrayKey)
                 if array == nil {
                     array = [String]()
                 }
                 
                 array!.append(user.username)
-                NSUserDefaults.standardUserDefaults().setObject(array!, forKey: kAccountNameArrayKey)
-                NSUserDefaults.standardUserDefaults().setObject(user.username, forKey: kActiveAccountNameKey)
-                NSUserDefaults.standardUserDefaults().synchronize()
+                userDefaults?.setObject(array!, forKey: kAccountNameArrayKey)
+               
+                userDefaults?.setObject(user.username, forKey: kActiveAccountNameKey)
+                userDefaults?.synchronize()
                 
                 NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
                 self.dismissViewController(self)

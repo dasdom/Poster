@@ -10,6 +10,7 @@ import Cocoa
 
 let ShouldLoginWindowNotification = "ShouldLoginWindowNotification"
 let ShouldLogoutWindowNotification = "ShouldLogoutWindowNotification"
+let kSuiteName = "group.de.dasdom.posteruserdefaults"
 
 class ADNAccountsPreferenceViewController: NSViewController {
 
@@ -29,12 +30,13 @@ class ADNAccountsPreferenceViewController: NSViewController {
     }
     
     func loadAccounts() {
-        if let accounts = NSUserDefaults.standardUserDefaults().arrayForKey(kAccountNameArrayKey) as? [String] {
+        let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+        if let accounts = userDefaults?.arrayForKey(kAccountNameArrayKey) as? [String] {
             self.accounts = accounts
             
             tableView.reloadData()
 
-            if let username = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountNameKey) {
+            if let username = userDefaults?.stringForKey(kActiveAccountNameKey) {
                 rowOfSelectedAccount = find(accounts, username)
             }
          
@@ -77,8 +79,9 @@ extension ADNAccountsPreferenceViewController: NSTableViewDelegate {
     func tableViewSelectionDidChange(notification: NSNotification) {
         let username = self.accounts[tableView.selectedRow]
 
-        NSUserDefaults.standardUserDefaults().setObject(username, forKey: kActiveAccountNameKey)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+        userDefaults?.setObject(username, forKey: kActiveAccountNameKey)
+        userDefaults?.synchronize()
         
         NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
     }

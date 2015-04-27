@@ -53,7 +53,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
     func updateView() {
         if accessToken == nil {
-            if let username = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountNameKey) {
+            let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+            if let username = userDefaults?.stringForKey(kActiveAccountNameKey) {
                 accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)")
             }
         }
@@ -92,7 +93,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
         println("post")
         
         if accessToken == nil {
-            if let username = NSUserDefaults.standardUserDefaults().stringForKey(kActiveAccountNameKey) {
+            let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+            if let username = userDefaults?.stringForKey(kActiveAccountNameKey) {
                 accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)")
             }
         }
