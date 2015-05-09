@@ -22,12 +22,13 @@ class ViewController: NSViewController, NSTextViewDelegate {
     var username: String?
 //    var image: NSImage?
     
-    @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var characterCountLabel: NSTextField!
     @IBOutlet weak var postButton: NSButton!
     @IBOutlet weak var statusLabel: NSTextField!
     
     @IBOutlet weak var avatarImageView: NSImageView!
+    @IBOutlet weak var postImageConstraint: NSLayoutConstraint!
+    @IBOutlet weak var postImageView: NSImageView!
     
     var accountStore: ACAccountStore?
     var activeAccountIdentifier: String?
@@ -49,6 +50,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
         updateView()
         updatePostButton()
         accountStore = ACAccountStore()
+        
+        postImageConstraint.constant = 0
     }
     
     func updateView() {
@@ -125,11 +128,11 @@ class ViewController: NSViewController, NSTextViewDelegate {
         let adnApiCommunicator = ADNAPICommunicator()
         statusLabel.stringValue = "Posting to App.net"
         postButton.enabled = false
-        adnApiCommunicator.postText(postText, linksArray: linksArray, accessToken: accessToken!, image: imageView.image) { () -> () in
+        adnApiCommunicator.postText(postText, linksArray: linksArray, accessToken: accessToken!, image: postImageView.image) { () -> () in
             
             if self.activeAccountIdentifier != nil {
                 self.statusLabel.stringValue = "Tweeting to Twitter"
-                self.tweetText(postText, linksArray: linksArray, accountIdentifier: self.activeAccountIdentifier!, image: self.imageView.image, completion: { () -> () in
+                self.tweetText(postText, linksArray: linksArray, accountIdentifier: self.activeAccountIdentifier!, image: self.postImageView.image, completion: { () -> () in
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.resetView()
                     });
@@ -147,27 +150,32 @@ class ViewController: NSViewController, NSTextViewDelegate {
     func resetView() {
         textView.string = ""
 //        image = nil
-        imageView.image = nil
+        postImageView.image = nil
+        postImageConstraint.constant = 0
         statusLabel.stringValue = ""
         postButton.enabled = true
     }
     
     @IBAction func changePicture(sender: AnyObject) {
-        IKPictureTaker().beginPictureTakerSheetForWindow(self.view.window,
-            withDelegate: self,
-            didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:",
-            contextInfo: nil)
+        IKPictureTaker().beginPictureTakerSheetForWindow(self.view.window, withDelegate: self, didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:", contextInfo: nil)
+//        IKPictureTaker().popUpRecentsMenuForView(self.view, withDelegate: self, didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:", contextInfo: nil)
     }
     
     func pictureTakerDidEnd(picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafePointer<Void>) {
         let image = picker.outputImage()
         
         if image != nil && returnCode == NSModalResponseOK {
-            self.imageView.image = image
+            postImageView.image = image
+            postImageConstraint.constant = 100
 //            self.image = image
         }
     }
     
+    @IBAction func imageAction(sender: NSImageView) {
+        view.window?.makeFirstResponder(textView)
+        postImageView.image = nil
+        postImageConstraint.constant = 0
+    }
 }
 
 // MARK: - Notifications
@@ -193,7 +201,7 @@ extension ViewController {
         println("postTextPartTwo: \(tweetTwo)")
         
         var urlString = "https://api.twitter.com/1.1/statuses/update.json"
-        if imageView.image != nil {
+        if postImageView.image != nil {
             urlString = "https://api.twitter.com/1.1/statuses/update_with_media.json"
         }
         

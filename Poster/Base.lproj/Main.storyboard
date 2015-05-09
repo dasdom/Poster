@@ -668,12 +668,12 @@
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="PosterWindowController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Poster" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" unifiedTitleAndToolbar="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="514" y="558" width="480" height="200"/>
+                        <rect key="contentRect" x="514" y="558" width="400" height="200"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="400" height="200"/>
-                        <toolbar key="toolbar" implicitIdentifier="1F4B9D12-0261-40E6-B37D-55F2941E68AB" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="eaj-Ue-hnF">
+                        <toolbar key="toolbar" implicitIdentifier="1F4B9D12-0261-40E6-B37D-55F2941E68AB" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="small" id="eaj-Ue-hnF">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="DEE50A5D-5A94-4B57-B333-FEFF3464AC40" label="Login" paletteLabel="" id="ldu-Hy-Spr">
                                     <nil key="toolTip"/>
@@ -924,11 +924,11 @@
             <objects>
                 <viewController title="Poster" id="XfG-lQ-9wD" customClass="ViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mHN-bO-uTr">
-                                <rect key="frame" x="398" y="13" width="68" height="32"/>
+                                <rect key="frame" x="318" y="13" width="68" height="32"/>
                                 <buttonCell key="cell" type="push" title="Post" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RQA-w0-lqv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -942,10 +942,10 @@ DQ
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="nbh-md-NnB" customClass="BackgroundView" customModule="Poster" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="61" width="480" height="209"/>
+                                <rect key="frame" x="0.0" y="61" width="400" height="139"/>
                                 <subviews>
                                     <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-t9-SJ0">
-                                        <rect key="frame" x="88" y="20" width="372" height="169"/>
+                                        <rect key="frame" x="88" y="20" width="184" height="99"/>
                                         <clipView key="contentView" id="xpw-yT-cjv">
                                             <rect key="frame" x="1" y="1" width="223" height="133"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -954,10 +954,10 @@ DQ
                                                     <rect key="frame" x="0.0" y="0.0" width="223" height="169"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="372" height="169"/>
+                                                    <size key="minSize" width="184" height="99"/>
                                                     <size key="maxSize" width="463" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <size key="minSize" width="372" height="169"/>
+                                                    <size key="minSize" width="184" height="99"/>
                                                     <size key="maxSize" width="463" height="10000000"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="XfG-lQ-9wD" id="fCf-Wb-amr"/>
@@ -976,7 +976,7 @@ DQ
                                         </scroller>
                                     </scrollView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80X-nM-Dnt">
-                                        <rect key="frame" x="17" y="126" width="66" height="66"/>
+                                        <rect key="frame" x="17" y="56" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="2NH-pd-IsB"/>
                                             <constraint firstAttribute="height" constant="60" id="OXZ-RP-DrP"/>
@@ -984,7 +984,7 @@ DQ
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="qZE-P7-tsG"/>
                                     </imageView>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4X-5p-R9C">
-                                        <rect key="frame" x="18" y="127" width="64" height="64"/>
+                                        <rect key="frame" x="18" y="57" width="64" height="64"/>
                                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="only" alignment="center" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="rBu-yl-m32">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="10"/>
@@ -993,13 +993,26 @@ DQ
                                             <segue destination="pNo-dq-CFE" kind="popover" popoverAnchorView="L4X-5p-R9C" popoverBehavior="t" preferredEdge="maxY" id="TEe-wC-jqp"/>
                                         </connections>
                                     </button>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9w-Ka-7lQ">
+                                        <rect key="frame" x="280" y="19" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="6K5-9j-r8V"/>
+                                            <constraint firstAttribute="width" constant="100" id="GYI-y6-lHI"/>
+                                        </constraints>
+                                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="FFg-Ao-sMU"/>
+                                        <connections>
+                                            <action selector="imageAction:" target="XfG-lQ-9wD" id="H5D-db-U0j"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dP1-t9-SJ0" secondAttribute="bottom" constant="20" id="FLZ-u8-JUG"/>
                                     <constraint firstItem="80X-nM-Dnt" firstAttribute="leading" secondItem="nbh-md-NnB" secondAttribute="leading" constant="20" id="O0h-Vq-twc"/>
                                     <constraint firstItem="dP1-t9-SJ0" firstAttribute="leading" secondItem="80X-nM-Dnt" secondAttribute="trailing" constant="8" id="Rsf-qV-aTv"/>
-                                    <constraint firstAttribute="trailing" secondItem="dP1-t9-SJ0" secondAttribute="trailing" constant="20" id="XJW-5D-fZT"/>
+                                    <constraint firstItem="h9w-Ka-7lQ" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="top" constant="20" id="TmI-ED-jqL"/>
+                                    <constraint firstAttribute="trailing" secondItem="h9w-Ka-7lQ" secondAttribute="trailing" constant="20" id="U3B-z9-Oi0"/>
                                     <constraint firstItem="dP1-t9-SJ0" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="top" constant="20" id="efT-4E-IjJ"/>
+                                    <constraint firstItem="h9w-Ka-7lQ" firstAttribute="leading" secondItem="dP1-t9-SJ0" secondAttribute="trailing" constant="8" id="flf-WV-lJ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="dP1-t9-SJ0" secondAttribute="bottom" constant="20" id="vIH-RY-e3q"/>
                                     <constraint firstItem="80X-nM-Dnt" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="top" constant="20" id="vcq-ZU-opK"/>
                                 </constraints>
                             </customView>
@@ -1013,16 +1026,8 @@ DQ
                                     <action selector="changePicture:" target="XfG-lQ-9wD" id="cre-EY-DwK"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="46w-2N-h5i">
-                                <rect key="frame" x="63" y="6" width="48" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Exv-3N-1xV"/>
-                                    <constraint firstAttribute="width" constant="48" id="d1k-cH-chj"/>
-                                </constraints>
-                                <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" id="X0r-p6-vE0"/>
-                            </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-YY-78Q">
-                                <rect key="frame" x="369" y="23" width="27" height="17"/>
+                                <rect key="frame" x="289" y="23" width="27" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="256" id="LAj-cP-Mnh">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
@@ -1030,7 +1035,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-H0-ySl">
-                                <rect key="frame" x="238" y="25" width="4" height="14"/>
+                                <rect key="frame" x="198" y="25" width="4" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="hKJ-hm-ere">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1040,7 +1045,6 @@ DQ
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nbh-md-NnB" secondAttribute="trailing" id="3c9-5T-OpK"/>
-                            <constraint firstItem="GYV-6X-yge" firstAttribute="centerY" secondItem="46w-2N-h5i" secondAttribute="centerY" constant="-0.5" id="4G8-g3-aro"/>
                             <constraint firstItem="nbh-md-NnB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6Uj-Na-Yb3"/>
                             <constraint firstAttribute="bottom" secondItem="mHN-bO-uTr" secondAttribute="bottom" constant="20" id="8i3-na-ki7"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="leading" secondItem="4dk-YY-78Q" secondAttribute="trailing" constant="10" id="9bj-U9-S0l"/>
@@ -1049,7 +1053,6 @@ DQ
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="top" secondItem="nbh-md-NnB" secondAttribute="bottom" constant="20" id="Rev-8Q-zn7"/>
                             <constraint firstAttribute="trailing" secondItem="mHN-bO-uTr" secondAttribute="trailing" constant="20" id="Tqo-2U-Ic2"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="centerY" secondItem="4dk-YY-78Q" secondAttribute="centerY" constant="1" id="gMv-AG-jM9"/>
-                            <constraint firstItem="46w-2N-h5i" firstAttribute="leading" secondItem="GYV-6X-yge" secondAttribute="trailing" constant="8" id="nEy-NR-W05"/>
                             <constraint firstItem="mHN-bO-uTr" firstAttribute="centerY" secondItem="GYV-6X-yge" secondAttribute="centerY" id="uwr-3R-3CV"/>
                             <constraint firstItem="GYV-6X-yge" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="w8W-3Y-SaP"/>
                             <constraint firstItem="nbh-md-NnB" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="wXP-GJ-l2j"/>
@@ -1058,8 +1061,9 @@ DQ
                     <connections>
                         <outlet property="avatarImageView" destination="80X-nM-Dnt" id="Pvj-ER-0us"/>
                         <outlet property="characterCountLabel" destination="4dk-YY-78Q" id="ZBe-cB-d93"/>
-                        <outlet property="imageView" destination="46w-2N-h5i" id="gpI-2v-79O"/>
                         <outlet property="postButton" destination="mHN-bO-uTr" id="nCz-qg-IHG"/>
+                        <outlet property="postImageConstraint" destination="GYI-y6-lHI" id="kZr-0D-PgB"/>
+                        <outlet property="postImageView" destination="h9w-Ka-7lQ" id="FYD-Dm-CvO"/>
                         <outlet property="statusLabel" destination="2b7-H0-ySl" id="puZ-ac-MzK"/>
                         <outlet property="textView" destination="HXZ-KK-jaC" id="kzl-J7-M8u"/>
                     </connections>
@@ -1157,7 +1161,7 @@ DQ
                 </viewController>
                 <customObject id="kJv-du-wxV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-90" y="1137.5"/>
+            <point key="canvasLocation" x="-105" y="1263.5"/>
         </scene>
     </scenes>
     <resources>
