@@ -20,9 +20,9 @@
 		5596AD801AED0F6C00A9F76D /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
 		5596AD811AED0F7000A9F76D /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
 		55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8944F1AE590B600695F58 /* LinkExtractor.swift */; };
+		F20284E91B0BC80E002EBA43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20284E81B0BC80E002EBA43 /* Images.xcassets */; };
 		F24759641ADA7C9A008F1F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759631ADA7C9A008F1F2E /* AppDelegate.swift */; };
 		F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759651ADA7C9A008F1F2E /* ViewController.swift */; };
-		F24759681ADA7C9A008F1F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24759671ADA7C9A008F1F2E /* Images.xcassets */; };
 		F247596B1ADA7C9A008F1F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24759691ADA7C9A008F1F2E /* Main.storyboard */; };
 		F24759851ADA92F3008F1F2E /* APICommunicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */; };
 		F24759871ADA9C2E008F1F2E /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */; };
@@ -146,11 +146,11 @@
 		5596AD751AED0CFB00A9F76D /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		5596AD771AED0CFB00A9F76D /* ShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		55F8944F1AE590B600695F58 /* LinkExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkExtractor.swift; sourceTree = "<group>"; };
+		F20284E81B0BC80E002EBA43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F247595E1ADA7C9A008F1F2E /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759621ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24759631ADA7C9A008F1F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F24759651ADA7C9A008F1F2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F24759671ADA7C9A008F1F2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F247596A1ADA7C9A008F1F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F24759701ADA7C9A008F1F2E /* PosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759751ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 				55397AE51AE804EB00325EC1 /* Posting */,
 				55F8944E1AE590B600695F58 /* HelperClasses */,
 				F24759691ADA7C9A008F1F2E /* Main.storyboard */,
-				F24759671ADA7C9A008F1F2E /* Images.xcassets */,
+				F20284E81B0BC80E002EBA43 /* Images.xcassets */,
 				F24759611ADA7C9A008F1F2E /* Supporting Files */,
 			);
 			path = Poster;
@@ -603,6 +603,7 @@
 				TargetAttributes = {
 					5596AD6D1AED0CFB00A9F76D = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Q6PD97MRX4;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
@@ -611,6 +612,7 @@
 					};
 					F247595D1ADA7C9A008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Q6PD97MRX4;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
@@ -626,6 +628,7 @@
 					};
 					F247598C1ADAFCC3008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Q6PD97MRX4;
 					};
 					F24759961ADAFCC3008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
@@ -633,6 +636,7 @@
 					};
 					F24759B91ADB01CD008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Q6PD97MRX4;
 					};
 					F24759C31ADB01CD008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
@@ -678,8 +682,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24759681ADA7C9A008F1F2E /* Images.xcassets in Resources */,
 				F247596B1ADA7C9A008F1F2E /* Main.storyboard in Resources */,
+				F20284E91B0BC80E002EBA43 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +872,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareToADN/ShareToADN.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Dominik Hauser (Q6PD97MRX4)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -877,6 +881,7 @@
 				INFOPLIST_FILE = ShareToADN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bc2cc8bd-edce-4220-acaf-e9c166f2b559";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -885,11 +890,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareToADN/ShareToADN.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Dominik Hauser (Q6PD97MRX4)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ShareToADN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bc2cc8bd-edce-4220-acaf-e9c166f2b559";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -979,11 +985,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Poster/Poster.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Dominik Hauser (Q6PD97MRX4)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -992,11 +1000,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Poster/Poster.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Dominik Hauser (Q6PD97MRX4)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1042,6 +1052,8 @@
 		F24759A71ADAFCC4008F1F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1057,6 +1069,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1066,6 +1079,8 @@
 		F24759A81ADAFCC4008F1F2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1077,6 +1092,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1120,6 +1136,8 @@
 		F24759D41ADB01CE008F1F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1135,6 +1153,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1144,6 +1163,8 @@
 		F24759D51ADB01CE008F1F2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1155,6 +1176,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1205,6 +1227,7 @@
 				5596AD7E1AED0CFB00A9F76D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F24759591ADA7C9A008F1F2E /* Build configuration list for PBXProject "Poster" */ = {
 			isa = XCConfigurationList;
