@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>$(TeamIdentifierPrefix).group.de.dasdom.posteruserdefaults</string>
+		<string>$(TeamIdentifierPrefix)group.de.dasdom.posteruserdefaults</string>
 	</array>
 	<key>com.apple.security.device.camera</key>
 	<true/>

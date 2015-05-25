@@ -100,7 +100,8 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
                
                 userDefaults?.setObject(user.username, forKey: kActiveAccountNameKey)
                 userDefaults?.synchronize()
-                
+//              println("userdefaults \(userDefaults?.dictionaryRepresentation())")
+              
                 NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
                 self.dismissViewController(self)
             });

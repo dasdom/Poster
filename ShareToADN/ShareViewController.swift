@@ -33,7 +33,8 @@ class ShareViewController: NSViewController {
         var itemProvider: NSItemProvider?
         
         let userDefaults = NSUserDefaults(suiteName: kSuiteName)
-        if let usernameArray = userDefaults?.arrayForKey(kAccountNameArrayKey) as? [String] {
+//      println("userdefaults \(userDefaults?.dictionaryRepresentation())")
+      if let usernameArray = userDefaults?.arrayForKey(kAccountNameArrayKey) as? [String] {
             for username in usernameArray {
                 accountPopUpButton.addItemWithTitle(username)
             }
