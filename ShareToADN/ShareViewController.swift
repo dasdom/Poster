@@ -8,7 +8,7 @@
 
 import Cocoa
 import KeychainAccess
-import PostToADN
+import ADN
 
 let kSuiteName = "group.de.dasdom.posteruserdefaults"
 let kActiveAccountNameKey = "kActiveAccountNameKey"

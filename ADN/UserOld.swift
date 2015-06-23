@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct User {
+public struct UserOld {
     public let username: String
     public let userId: Int
     

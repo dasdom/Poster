@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import PostToADN
+import ADN
 import KeychainAccess
 import Quartz
 import Accounts

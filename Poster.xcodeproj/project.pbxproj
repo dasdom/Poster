@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		550BCAD41AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCAD31AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift */; };
-		5517E56F1AEA3897000E157E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517E56E1AEA3897000E157E /* User.swift */; };
 		551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */; };
 		551FB68B1AE3CB7C00EEAC3D /* StringURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */; };
 		551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */; };
@@ -18,23 +17,30 @@
 		5596AD781AED0CFB00A9F76D /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5596AD771AED0CFB00A9F76D /* ShareViewController.xib */; };
 		5596AD7B1AED0CFB00A9F76D /* ShareToADN.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5596AD6E1AED0CFB00A9F76D /* ShareToADN.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5596AD801AED0F6C00A9F76D /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
-		5596AD811AED0F7000A9F76D /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
 		55F894501AE590B600695F58 /* LinkExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8944F1AE590B600695F58 /* LinkExtractor.swift */; };
 		F20284E91B0BC80E002EBA43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20284E81B0BC80E002EBA43 /* Images.xcassets */; };
+		F22D9F441B13ABFC008D110E /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F431B13ABFC008D110E /* TimeLineViewController.swift */; };
+		F22D9F501B13ADA8008D110E /* ADN.h in Headers */ = {isa = PBXBuildFile; fileRef = F22D9F4F1B13ADA8008D110E /* ADN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22D9F561B13ADA8008D110E /* ADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D9F4B1B13ADA8008D110E /* ADN.framework */; };
+		F22D9F5F1B13ADA8008D110E /* ADNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F5E1B13ADA8008D110E /* ADNTests.swift */; };
+		F22D9F621B13ADA8008D110E /* ADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D9F4B1B13ADA8008D110E /* ADN.framework */; };
+		F22D9F631B13ADA8008D110E /* ADN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F22D9F4B1B13ADA8008D110E /* ADN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F22D9F701B13AF8D008D110E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
+		F22D9F711B13B011008D110E /* ADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D9F4B1B13ADA8008D110E /* ADN.framework */; };
+		F22D9F781B13B388008D110E /* ADNAPICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F721B13B388008D110E /* ADNAPICommunicator.swift */; };
+		F22D9F791B13B388008D110E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F731B13B388008D110E /* ImageService.swift */; };
+		F22D9F7A1B13B388008D110E /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F741B13B388008D110E /* NSImageExtensions.swift */; };
+		F22D9F7B1B13B388008D110E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F751B13B388008D110E /* PostService.swift */; };
+		F22D9F7C1B13B388008D110E /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F761B13B388008D110E /* RequestFactory.swift */; };
+		F22D9F7D1B13B388008D110E /* UserOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F771B13B388008D110E /* UserOld.swift */; };
+		F22D9F811B13B3DD008D110E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F7F1B13B3DD008D110E /* Post.swift */; };
+		F22D9F821B13B3DD008D110E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F801B13B3DD008D110E /* User.swift */; };
+		F22D9F841B165214008D110E /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D9F831B165214008D110E /* PostCellView.swift */; };
 		F24759641ADA7C9A008F1F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759631ADA7C9A008F1F2E /* AppDelegate.swift */; };
 		F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759651ADA7C9A008F1F2E /* ViewController.swift */; };
 		F247596B1ADA7C9A008F1F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24759691ADA7C9A008F1F2E /* Main.storyboard */; };
 		F24759851ADA92F3008F1F2E /* APICommunicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */; };
 		F24759871ADA9C2E008F1F2E /* WebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */; };
-		F24759921ADAFCC3008F1F2E /* PostToADN.h in Headers */ = {isa = PBXBuildFile; fileRef = F24759911ADAFCC3008F1F2E /* PostToADN.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F24759981ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
-		F24759A11ADAFCC4008F1F2E /* PostToADNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */; };
-		F24759A41ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; };
-		F24759A51ADAFCC4008F1F2E /* PostToADN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F24759B11ADB0042008F1F2E /* ADNAPICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */; };
-		F24759B21ADB0042008F1F2E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AE1ADB0042008F1F2E /* ImageService.swift */; };
-		F24759B31ADB0042008F1F2E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759AF1ADB0042008F1F2E /* PostService.swift */; };
-		F24759B41ADB0042008F1F2E /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759B01ADB0042008F1F2E /* RequestFactory.swift */; };
 		F24759BF1ADB01CD008F1F2E /* KeychainAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = F24759BE1ADB01CD008F1F2E /* KeychainAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F24759C51ADB01CD008F1F2E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
 		F24759CE1ADB01CE008F1F2E /* KeychainAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759CD1ADB01CE008F1F2E /* KeychainAccessTests.swift */; };
@@ -42,8 +48,6 @@
 		F24759D21ADB01CE008F1F2E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F24759DA1ADB0268008F1F2E /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759D91ADB0268008F1F2E /* KeychainAccess.swift */; };
 		F24759DC1ADDA633008F1F2E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24759DB1ADDA633008F1F2E /* BackgroundView.swift */; };
-		F2B001A31AE1991700F806CE /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */; };
-		F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,33 +58,33 @@
 			remoteGlobalIDString = 5596AD6D1AED0CFB00A9F76D;
 			remoteInfo = ShareToADN;
 		};
+		F22D9F571B13ADA8008D110E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22D9F4A1B13ADA8008D110E;
+			remoteInfo = ADN;
+		};
+		F22D9F591B13ADA8008D110E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
+			remoteInfo = Poster;
+		};
+		F22D9F601B13ADA8008D110E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22D9F4A1B13ADA8008D110E;
+			remoteInfo = ADN;
+		};
 		F24759711ADA7C9A008F1F2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
 			remoteInfo = Poster;
-		};
-		F24759991ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F247598C1ADAFCC3008F1F2E;
-			remoteInfo = PostToADN;
-		};
-		F247599B1ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F247595D1ADA7C9A008F1F2E;
-			remoteInfo = Poster;
-		};
-		F24759A21ADAFCC4008F1F2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F24759561ADA7C9A008F1F2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F247598C1ADAFCC3008F1F2E;
-			remoteInfo = PostToADN;
 		};
 		F24759C61ADB01CD008F1F2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -124,7 +128,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F24759D21ADB01CE008F1F2E /* KeychainAccess.framework in Embed Frameworks */,
-				F24759A51ADAFCC4008F1F2E /* PostToADN.framework in Embed Frameworks */,
+				F22D9F631B13ADA8008D110E /* ADN.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +137,6 @@
 
 /* Begin PBXFileReference section */
 		550BCAD31AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADNAccountsPreferenceViewController.swift; path = Preferences/ADNAccountsPreferenceViewController.swift; sourceTree = "<group>"; };
-		5517E56E1AEA3897000E157E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		551AD4431AE2B27B006FA4E9 /* PosterWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterWindowController.swift; sourceTree = "<group>"; };
 		551FB68A1AE3CB7C00EEAC3D /* StringURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringURLExtension.swift; path = ../StringURLExtension.swift; sourceTree = "<group>"; };
 		551FB68C1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrossPostPreferenceViewController.swift; path = Preferences/CrossPostPreferenceViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +150,22 @@
 		5596AD771AED0CFB00A9F76D /* ShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		55F8944F1AE590B600695F58 /* LinkExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkExtractor.swift; sourceTree = "<group>"; };
 		F20284E81B0BC80E002EBA43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F22D9F431B13ABFC008D110E /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeLineViewController.swift; path = TimeLine/TimeLineViewController.swift; sourceTree = "<group>"; };
+		F22D9F4B1B13ADA8008D110E /* ADN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ADN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22D9F4E1B13ADA8008D110E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22D9F4F1B13ADA8008D110E /* ADN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADN.h; sourceTree = "<group>"; };
+		F22D9F551B13ADA8008D110E /* ADNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22D9F5D1B13ADA8008D110E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22D9F5E1B13ADA8008D110E /* ADNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADNTests.swift; sourceTree = "<group>"; };
+		F22D9F721B13B388008D110E /* ADNAPICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADNAPICommunicator.swift; sourceTree = "<group>"; };
+		F22D9F731B13B388008D110E /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F22D9F741B13B388008D110E /* NSImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		F22D9F751B13B388008D110E /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F22D9F761B13B388008D110E /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		F22D9F771B13B388008D110E /* UserOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOld.swift; sourceTree = "<group>"; };
+		F22D9F7F1B13B3DD008D110E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F22D9F801B13B3DD008D110E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F22D9F831B165214008D110E /* PostCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCellView.swift; path = TimeLine/PostCellView.swift; sourceTree = "<group>"; };
 		F247595E1ADA7C9A008F1F2E /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759621ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24759631ADA7C9A008F1F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,16 +175,6 @@
 		F24759751ADA7C9A008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24759841ADA92F3008F1F2E /* APICommunicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICommunicatorTests.swift; path = Networking/APICommunicatorTests.swift; sourceTree = "<group>"; };
 		F24759861ADA9C2E008F1F2E /* WebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebLoginViewController.swift; path = Networking/WebLoginViewController.swift; sourceTree = "<group>"; };
-		F247598D1ADAFCC3008F1F2E /* PostToADN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostToADN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F24759901ADAFCC3008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F24759911ADAFCC3008F1F2E /* PostToADN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostToADN.h; sourceTree = "<group>"; };
-		F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostToADNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F247599F1ADAFCC4008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostToADNTests.swift; sourceTree = "<group>"; };
-		F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADNAPICommunicator.swift; sourceTree = "<group>"; };
-		F24759AE1ADB0042008F1F2E /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		F24759AF1ADB0042008F1F2E /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
-		F24759B01ADB0042008F1F2E /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24759BD1ADB01CD008F1F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24759BE1ADB01CD008F1F2E /* KeychainAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainAccess.h; sourceTree = "<group>"; };
@@ -174,7 +183,6 @@
 		F24759CD1ADB01CE008F1F2E /* KeychainAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccessTests.swift; sourceTree = "<group>"; };
 		F24759D91ADB0268008F1F2E /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		F24759DB1ADDA633008F1F2E /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Posting/BackgroundView.swift; sourceTree = "<group>"; };
-		F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +190,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5596AD811AED0F7000A9F76D /* PostToADN.framework in Frameworks */,
+				F22D9F711B13B011008D110E /* ADN.framework in Frameworks */,
 				5596AD801AED0F6C00A9F76D /* KeychainAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22D9F471B13ADA8008D110E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22D9F701B13AF8D008D110E /* KeychainAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22D9F521B13ADA8008D110E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22D9F561B13ADA8008D110E /* ADN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24759D11ADB01CE008F1F2E /* KeychainAccess.framework in Frameworks */,
-				F24759A41ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */,
+				F22D9F621B13ADA8008D110E /* ADN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,22 +224,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24759891ADAFCC3008F1F2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2B001A31AE1991700F806CE /* KeychainAccess.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24759941ADAFCC3008F1F2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F24759981ADAFCC4008F1F2E /* PostToADN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,16 +301,67 @@
 			path = HelperClasses;
 			sourceTree = "<group>";
 		};
+		F22D9F451B13AC02008D110E /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				F22D9F431B13ABFC008D110E /* TimeLineViewController.swift */,
+				F22D9F831B165214008D110E /* PostCellView.swift */,
+			);
+			name = TimeLine;
+			sourceTree = "<group>";
+		};
+		F22D9F4C1B13ADA8008D110E /* ADN */ = {
+			isa = PBXGroup;
+			children = (
+				F22D9F4F1B13ADA8008D110E /* ADN.h */,
+				F22D9F721B13B388008D110E /* ADNAPICommunicator.swift */,
+				F22D9F731B13B388008D110E /* ImageService.swift */,
+				F22D9F741B13B388008D110E /* NSImageExtensions.swift */,
+				F22D9F751B13B388008D110E /* PostService.swift */,
+				F22D9F761B13B388008D110E /* RequestFactory.swift */,
+				F22D9F771B13B388008D110E /* UserOld.swift */,
+				F22D9F7F1B13B3DD008D110E /* Post.swift */,
+				F22D9F801B13B3DD008D110E /* User.swift */,
+				F22D9F4D1B13ADA8008D110E /* Supporting Files */,
+			);
+			path = ADN;
+			sourceTree = "<group>";
+		};
+		F22D9F4D1B13ADA8008D110E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F22D9F4E1B13ADA8008D110E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F22D9F5B1B13ADA8008D110E /* ADNTests */ = {
+			isa = PBXGroup;
+			children = (
+				F22D9F5E1B13ADA8008D110E /* ADNTests.swift */,
+				F22D9F5C1B13ADA8008D110E /* Supporting Files */,
+			);
+			path = ADNTests;
+			sourceTree = "<group>";
+		};
+		F22D9F5C1B13ADA8008D110E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F22D9F5D1B13ADA8008D110E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F24759551ADA7C9A008F1F2E = {
 			isa = PBXGroup;
 			children = (
 				F24759601ADA7C9A008F1F2E /* Poster */,
 				F24759731ADA7C9A008F1F2E /* PosterTests */,
-				F247598E1ADAFCC3008F1F2E /* PostToADN */,
-				F247599D1ADAFCC4008F1F2E /* PostToADNTests */,
 				F24759BB1ADB01CD008F1F2E /* KeychainAccess */,
 				F24759CA1ADB01CD008F1F2E /* KeychainAccessTests */,
 				5596AD6F1AED0CFB00A9F76D /* ShareToADN */,
+				F22D9F4C1B13ADA8008D110E /* ADN */,
+				F22D9F5B1B13ADA8008D110E /* ADNTests */,
 				F247595F1ADA7C9A008F1F2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,11 +371,11 @@
 			children = (
 				F247595E1ADA7C9A008F1F2E /* Poster.app */,
 				F24759701ADA7C9A008F1F2E /* PosterTests.xctest */,
-				F247598D1ADAFCC3008F1F2E /* PostToADN.framework */,
-				F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */,
 				F24759BA1ADB01CD008F1F2E /* KeychainAccess.framework */,
 				F24759C41ADB01CD008F1F2E /* KeychainAccessTests.xctest */,
 				5596AD6E1AED0CFB00A9F76D /* ShareToADN.appex */,
+				F22D9F4B1B13ADA8008D110E /* ADN.framework */,
+				F22D9F551B13ADA8008D110E /* ADNTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +389,7 @@
 				550BCAD21AEA40D700E462D2 /* Preferences */,
 				55397AE41AE804DF00325EC1 /* Login */,
 				55397AE51AE804EB00325EC1 /* Posting */,
+				F22D9F451B13AC02008D110E /* TimeLine */,
 				55F8944E1AE590B600695F58 /* HelperClasses */,
 				F24759691ADA7C9A008F1F2E /* Main.storyboard */,
 				F20284E81B0BC80E002EBA43 /* Images.xcassets */,
@@ -359,46 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				F24759751ADA7C9A008F1F2E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F247598E1ADAFCC3008F1F2E /* PostToADN */ = {
-			isa = PBXGroup;
-			children = (
-				F24759911ADAFCC3008F1F2E /* PostToADN.h */,
-				F24759AD1ADB0042008F1F2E /* ADNAPICommunicator.swift */,
-				F24759AE1ADB0042008F1F2E /* ImageService.swift */,
-				F24759AF1ADB0042008F1F2E /* PostService.swift */,
-				F24759B01ADB0042008F1F2E /* RequestFactory.swift */,
-				F2C7D13F1AE1378D00409984 /* NSImageExtensions.swift */,
-				5517E56E1AEA3897000E157E /* User.swift */,
-				F247598F1ADAFCC3008F1F2E /* Supporting Files */,
-			);
-			path = PostToADN;
-			sourceTree = "<group>";
-		};
-		F247598F1ADAFCC3008F1F2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F24759901ADAFCC3008F1F2E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F247599D1ADAFCC4008F1F2E /* PostToADNTests */ = {
-			isa = PBXGroup;
-			children = (
-				F24759A01ADAFCC4008F1F2E /* PostToADNTests.swift */,
-				F247599E1ADAFCC4008F1F2E /* Supporting Files */,
-			);
-			path = PostToADNTests;
-			sourceTree = "<group>";
-		};
-		F247599E1ADAFCC4008F1F2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F247599F1ADAFCC4008F1F2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -441,11 +461,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F247598A1ADAFCC3008F1F2E /* Headers */ = {
+		F22D9F481B13ADA8008D110E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24759921ADAFCC3008F1F2E /* PostToADN.h in Headers */,
+				F22D9F501B13ADA8008D110E /* ADN.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +497,43 @@
 			productReference = 5596AD6E1AED0CFB00A9F76D /* ShareToADN.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F22D9F4A1B13ADA8008D110E /* ADN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22D9F641B13ADA8008D110E /* Build configuration list for PBXNativeTarget "ADN" */;
+			buildPhases = (
+				F22D9F461B13ADA8008D110E /* Sources */,
+				F22D9F471B13ADA8008D110E /* Frameworks */,
+				F22D9F481B13ADA8008D110E /* Headers */,
+				F22D9F491B13ADA8008D110E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADN;
+			productName = ADN;
+			productReference = F22D9F4B1B13ADA8008D110E /* ADN.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F22D9F541B13ADA8008D110E /* ADNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22D9F671B13ADA8008D110E /* Build configuration list for PBXNativeTarget "ADNTests" */;
+			buildPhases = (
+				F22D9F511B13ADA8008D110E /* Sources */,
+				F22D9F521B13ADA8008D110E /* Frameworks */,
+				F22D9F531B13ADA8008D110E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22D9F581B13ADA8008D110E /* PBXTargetDependency */,
+				F22D9F5A1B13ADA8008D110E /* PBXTargetDependency */,
+			);
+			name = ADNTests;
+			productName = ADNTests;
+			productReference = F22D9F551B13ADA8008D110E /* ADNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F247595D1ADA7C9A008F1F2E /* Poster */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F247597A1ADA7C9A008F1F2E /* Build configuration list for PBXNativeTarget "Poster" */;
@@ -491,9 +548,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				F24759A31ADAFCC4008F1F2E /* PBXTargetDependency */,
 				F24759D01ADB01CE008F1F2E /* PBXTargetDependency */,
 				5596AD7A1AED0CFB00A9F76D /* PBXTargetDependency */,
+				F22D9F611B13ADA8008D110E /* PBXTargetDependency */,
 			);
 			name = Poster;
 			productName = Poster;
@@ -516,43 +573,6 @@
 			name = PosterTests;
 			productName = PosterTests;
 			productReference = F24759701ADA7C9A008F1F2E /* PosterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F247598C1ADAFCC3008F1F2E /* PostToADN */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F24759A61ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADN" */;
-			buildPhases = (
-				F24759881ADAFCC3008F1F2E /* Sources */,
-				F24759891ADAFCC3008F1F2E /* Frameworks */,
-				F247598A1ADAFCC3008F1F2E /* Headers */,
-				F247598B1ADAFCC3008F1F2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PostToADN;
-			productName = PostToADN;
-			productReference = F247598D1ADAFCC3008F1F2E /* PostToADN.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F24759961ADAFCC3008F1F2E /* PostToADNTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F24759AA1ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADNTests" */;
-			buildPhases = (
-				F24759931ADAFCC3008F1F2E /* Sources */,
-				F24759941ADAFCC3008F1F2E /* Frameworks */,
-				F24759951ADAFCC3008F1F2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F247599A1ADAFCC4008F1F2E /* PBXTargetDependency */,
-				F247599C1ADAFCC4008F1F2E /* PBXTargetDependency */,
-			);
-			name = PostToADNTests;
-			productName = PostToADNTests;
-			productReference = F24759971ADAFCC3008F1F2E /* PostToADNTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F24759B91ADB01CD008F1F2E /* KeychainAccess */ = {
@@ -610,6 +630,14 @@
 							};
 						};
 					};
+					F22D9F4A1B13ADA8008D110E = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = Q6PD97MRX4;
+					};
+					F22D9F541B13ADA8008D110E = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F247595D1ADA7C9A008F1F2E;
+					};
 					F247595D1ADA7C9A008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = Q6PD97MRX4;
@@ -623,14 +651,6 @@
 						};
 					};
 					F247596F1ADA7C9A008F1F2E = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = F247595D1ADA7C9A008F1F2E;
-					};
-					F247598C1ADAFCC3008F1F2E = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = Q6PD97MRX4;
-					};
-					F24759961ADAFCC3008F1F2E = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = F247595D1ADA7C9A008F1F2E;
 					};
@@ -659,11 +679,11 @@
 			targets = (
 				F247595D1ADA7C9A008F1F2E /* Poster */,
 				F247596F1ADA7C9A008F1F2E /* PosterTests */,
-				F247598C1ADAFCC3008F1F2E /* PostToADN */,
-				F24759961ADAFCC3008F1F2E /* PostToADNTests */,
 				F24759B91ADB01CD008F1F2E /* KeychainAccess */,
 				F24759C31ADB01CD008F1F2E /* KeychainAccessTests */,
 				5596AD6D1AED0CFB00A9F76D /* ShareToADN */,
+				F22D9F4A1B13ADA8008D110E /* ADN */,
+				F22D9F541B13ADA8008D110E /* ADNTests */,
 			);
 		};
 /* End PBXProject section */
@@ -678,6 +698,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F22D9F491B13ADA8008D110E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22D9F531B13ADA8008D110E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F247595C1ADA7C9A008F1F2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -688,20 +722,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F247596E1ADA7C9A008F1F2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F247598B1ADAFCC3008F1F2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24759951ADAFCC3008F1F2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -749,6 +769,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F22D9F461B13ADA8008D110E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22D9F781B13B388008D110E /* ADNAPICommunicator.swift in Sources */,
+				F22D9F7C1B13B388008D110E /* RequestFactory.swift in Sources */,
+				F22D9F7A1B13B388008D110E /* NSImageExtensions.swift in Sources */,
+				F22D9F791B13B388008D110E /* ImageService.swift in Sources */,
+				F22D9F821B13B3DD008D110E /* User.swift in Sources */,
+				F22D9F7D1B13B388008D110E /* UserOld.swift in Sources */,
+				F22D9F811B13B3DD008D110E /* Post.swift in Sources */,
+				F22D9F7B1B13B388008D110E /* PostService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22D9F511B13ADA8008D110E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22D9F5F1B13ADA8008D110E /* ADNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F247595A1ADA7C9A008F1F2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -759,6 +802,8 @@
 				5596AD671AECBF0900A9F76D /* ClientId.swift in Sources */,
 				550BCAD41AEAD96500E462D2 /* ADNAccountsPreferenceViewController.swift in Sources */,
 				551AD4441AE2B27B006FA4E9 /* PosterWindowController.swift in Sources */,
+				F22D9F841B165214008D110E /* PostCellView.swift in Sources */,
+				F22D9F441B13ABFC008D110E /* TimeLineViewController.swift in Sources */,
 				551FB68D1AE4058300EEAC3D /* CrossPostPreferenceViewController.swift in Sources */,
 				F24759661ADA7C9A008F1F2E /* ViewController.swift in Sources */,
 				F24759871ADA9C2E008F1F2E /* WebLoginViewController.swift in Sources */,
@@ -771,27 +816,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24759851ADA92F3008F1F2E /* APICommunicatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24759881ADAFCC3008F1F2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F24759B41ADB0042008F1F2E /* RequestFactory.swift in Sources */,
-				F2C7D1401AE1378D00409984 /* NSImageExtensions.swift in Sources */,
-				5517E56F1AEA3897000E157E /* User.swift in Sources */,
-				F24759B11ADB0042008F1F2E /* ADNAPICommunicator.swift in Sources */,
-				F24759B31ADB0042008F1F2E /* PostService.swift in Sources */,
-				F24759B21ADB0042008F1F2E /* ImageService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F24759931ADAFCC3008F1F2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F24759A11ADAFCC4008F1F2E /* PostToADNTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,25 +843,25 @@
 			target = 5596AD6D1AED0CFB00A9F76D /* ShareToADN */;
 			targetProxy = 5596AD791AED0CFB00A9F76D /* PBXContainerItemProxy */;
 		};
+		F22D9F581B13ADA8008D110E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22D9F4A1B13ADA8008D110E /* ADN */;
+			targetProxy = F22D9F571B13ADA8008D110E /* PBXContainerItemProxy */;
+		};
+		F22D9F5A1B13ADA8008D110E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F247595D1ADA7C9A008F1F2E /* Poster */;
+			targetProxy = F22D9F591B13ADA8008D110E /* PBXContainerItemProxy */;
+		};
+		F22D9F611B13ADA8008D110E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22D9F4A1B13ADA8008D110E /* ADN */;
+			targetProxy = F22D9F601B13ADA8008D110E /* PBXContainerItemProxy */;
+		};
 		F24759721ADA7C9A008F1F2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F247595D1ADA7C9A008F1F2E /* Poster */;
 			targetProxy = F24759711ADA7C9A008F1F2E /* PBXContainerItemProxy */;
-		};
-		F247599A1ADAFCC4008F1F2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F247598C1ADAFCC3008F1F2E /* PostToADN */;
-			targetProxy = F24759991ADAFCC4008F1F2E /* PBXContainerItemProxy */;
-		};
-		F247599C1ADAFCC4008F1F2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F247595D1ADA7C9A008F1F2E /* Poster */;
-			targetProxy = F247599B1ADAFCC4008F1F2E /* PBXContainerItemProxy */;
-		};
-		F24759A31ADAFCC4008F1F2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F247598C1ADAFCC3008F1F2E /* PostToADN */;
-			targetProxy = F24759A21ADAFCC4008F1F2E /* PBXContainerItemProxy */;
 		};
 		F24759C71ADB01CD008F1F2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -872,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareToADN/ShareToADN.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -880,7 +905,7 @@
 				INFOPLIST_FILE = ShareToADN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "975581d0-fc7d-43b2-89f1-1dc3f972fa25";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -889,12 +914,93 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShareToADN/ShareToADN.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ShareToADN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "975581d0-fc7d-43b2-89f1-1dc3f972fa25";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F22D9F651B13ADA8008D110E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F22D9F661B13ADA8008D110E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ADN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F22D9F681B13ADA8008D110E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
+			};
+			name = Debug;
+		};
+		F22D9F691B13ADA8008D110E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
 			};
 			name = Release;
 		};
@@ -983,12 +1089,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Poster/Poster.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "975581d0-fc7d-43b2-89f1-1dc3f972fa25";
 			};
 			name = Debug;
 		};
@@ -997,12 +1104,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Poster/Poster.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer: Dominik Hauser (MNX8UVNQT5)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Poster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "975581d0-fc7d-43b2-89f1-1dc3f972fa25";
 			};
 			name = Release;
 		};
@@ -1039,88 +1147,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = PosterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
-			};
-			name = Release;
-		};
-		F24759A71ADAFCC4008F1F2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PostToADN/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F24759A81ADAFCC4008F1F2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = PostToADN/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F24759AB1ADAFCC4008F1F2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PostToADNTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
-			};
-			name = Debug;
-		};
-		F24759AC1ADAFCC4008F1F2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PostToADNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poster.app/Contents/MacOS/Poster";
@@ -1221,6 +1247,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F22D9F641B13ADA8008D110E /* Build configuration list for PBXNativeTarget "ADN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22D9F651B13ADA8008D110E /* Debug */,
+				F22D9F661B13ADA8008D110E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22D9F671B13ADA8008D110E /* Build configuration list for PBXNativeTarget "ADNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22D9F681B13ADA8008D110E /* Debug */,
+				F22D9F691B13ADA8008D110E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F24759591ADA7C9A008F1F2E /* Build configuration list for PBXProject "Poster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1244,24 +1288,6 @@
 			buildConfigurations = (
 				F247597E1ADA7C9A008F1F2E /* Debug */,
 				F247597F1ADA7C9A008F1F2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F24759A61ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F24759A71ADAFCC4008F1F2E /* Debug */,
-				F24759A81ADAFCC4008F1F2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F24759AA1ADAFCC4008F1F2E /* Build configuration list for PBXNativeTarget "PostToADNTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F24759AB1ADAFCC4008F1F2E /* Debug */,
-				F24759AC1ADAFCC4008F1F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

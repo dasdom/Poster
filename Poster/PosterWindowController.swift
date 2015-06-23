@@ -12,22 +12,31 @@ import KeychainAccess
 let SwitchToNextAccountNotification = "SwitchToNextAccountNotification"
 
 class PosterWindowController: NSWindowController {
-
-    @IBOutlet weak var loginButton: NSButton!
-    
+  
+  var loginController: NSWindowController?
+  
     override func windowDidLoad() {
         super.windowDidLoad()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLoginOrLogout:", name: DidLoginOrLogoutNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLoginOrLogout:", name: DidLoginOrLogoutNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showLogin:", name: ShouldLoginWindowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showLogout:", name: ShouldLogoutWindowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "nextAccount:", name: SwitchToNextAccountNotification, object: nil)
         
         let userDefaults = NSUserDefaults(suiteName: kSuiteName)
-        if let username = userDefaults?.stringForKey(kActiveAccountNameKey), let accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)") {
-            loginButton.title = "Logout"
+        if let username = userDefaults?.stringForKey(kActiveAccountNameKey), accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)") {
+          
         } else {
-            performSegueWithIdentifier("ShowLogin", sender: self)
+////            performSegueWithIdentifier("ShowLogin", sender: self)
+//          loginController = storyboard?.instantiateControllerWithIdentifier("LoginWindowController") as? NSWindowController
+//          loginController?.showWindow(self)
+//          if let window = loginController?.window {
+////            NSApplication.sharedApplication().runModalForWindow(window)
+////            window.makeKeyAndOrderFront(self)
+//            self.window?.beginSheet(window, completionHandler: { (response) -> Void in
+//              
+//            })
+//          }
         }
     }
     
@@ -35,16 +44,16 @@ class PosterWindowController: NSWindowController {
 
 // MARK: - Notifications actions
 extension PosterWindowController {
-    func didLoginOrLogout(sender: NSNotification) {
-
-        let userDefaults = NSUserDefaults(suiteName: kSuiteName)
-        if let username = userDefaults?.stringForKey(kActiveAccountNameKey), let accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)") {
-            loginButton.title = "Logout"
-        } else {
-            loginButton.title = "Login"
-        }
-    }
-    
+//    func didLoginOrLogout(sender: NSNotification) {
+//
+//        let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+//        if let username = userDefaults?.stringForKey(kActiveAccountNameKey), let accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)") {
+//            loginButton.title = "Logout"
+//        } else {
+//            loginButton.title = "Login"
+//        }
+//    }
+  
     func showLogin(sender: NSNotification) {
         performSegueWithIdentifier("ShowLogin", sender: self)
     }

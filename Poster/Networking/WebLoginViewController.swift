@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 import KeychainAccess
-import PostToADN
+import ADN
 
 let kAccountNameArrayKey = "kAccountNameArrayKey"
 let kActiveAccountNameKey = "kActiveAccountNameKey"
@@ -25,7 +25,8 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let request = NSMutableURLRequest(URL: NSURL(string: "https://account.app.net/oauth/authenticate?client_id=\(kClientId)&response_type=token&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=write_post")!)
+    var urlString = "https://account.app.net/oauth/authenticate?client_id=\(kClientId)&response_type=token&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=write_post stream"
+    let request = NSMutableURLRequest(URL: NSURL(string: urlString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!)
     
 //    request.HTTPShouldHandleCookies = false
     
@@ -81,7 +82,7 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
         webView.loadHTMLString("Fetching username", baseURL: nil)
         
         let apiCommunicator = ADNAPICommunicator()
-        apiCommunicator.loggenInUserWithAccessToken(accessToken) { user in
+        apiCommunicator.loggedInUserWithAccessToken(accessToken) { user in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 let user = user
                 println("username: \(user.username)")
@@ -103,7 +104,7 @@ class WebLoginViewController: NSViewController, WKNavigationDelegate {
 //              println("userdefaults \(userDefaults?.dictionaryRepresentation())")
               
                 NSNotificationCenter.defaultCenter().postNotificationName(DidLoginOrLogoutNotification, object: self, userInfo: nil)
-                self.dismissViewController(self)
+                NSApplication.sharedApplication().stopModal()
             });
         }
       }
