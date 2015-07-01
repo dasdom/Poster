@@ -668,7 +668,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="bzC-A7-lNr" viewBased="YES" id="cU4-u0-DmU">
-                                            <rect key="frame" x="0.0" y="0.0" width="408" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="417" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -715,7 +715,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.55555555555555558" horizontal="YES" id="RyJ-1r-4mt">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="RyJ-1r-4mt">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -724,7 +724,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="bzC-A7-lNr">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="417" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -740,6 +740,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="addAccount:" target="Kzq-Cg-tHx" id="aa0-BL-P2a"/>
+                                    <segue destination="s8u-Le-n4H" kind="show" id="FEf-u0-Png"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hse-Na-KZV">
@@ -825,7 +826,7 @@
                 </viewController>
                 <customObject id="xAb-tU-xzQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398" y="-764"/>
+            <point key="canvasLocation" x="1389" y="-693"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="CzL-wH-rHb">
@@ -861,11 +862,11 @@
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="152" horizontalPageScroll="10" verticalLineScroll="152" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ct-DS-IjA">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="604"/>
                                 <clipView key="contentView" misplaced="YES" id="KM9-rG-xVK">
-                                    <rect key="frame" x="1" y="17" width="238" height="117"/>
+                                    <rect key="frame" x="1" y="17" width="448" height="571"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="150" headerView="eqj-bJ-0eQ" viewBased="YES" id="srA-OQ-Fgk">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="452" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -941,8 +942,8 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.99999999999999534" horizontal="YES" id="sxT-8E-md5">
-                                    <rect key="frame" x="1" y="91.264708340167999" width="177" height="15"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="sxT-8E-md5">
+                                    <rect key="frame" x="1" y="588" width="448" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1.2702171730919906e-12" horizontal="NO" id="3fk-s0-kyu">
@@ -950,7 +951,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="eqj-bJ-0eQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="452" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -1182,7 +1183,7 @@ DQ
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="AccountsColumn" width="133.2932604410457" minWidth="40" maxWidth="1000" id="FUk-hW-7Nh">
+                                                <tableColumn identifier="AccountsColumn" width="127.2932604410457" minWidth="40" maxWidth="1000" id="FUk-hW-7Nh">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="App.net accounts">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1223,8 +1224,8 @@ DQ
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.16666666666666666" horizontal="YES" id="Shj-Za-ELK">
-                                    <rect key="frame" x="1" y="115.96730023622513" width="234" height="16"/>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.16666666666666666" horizontal="YES" id="Shj-Za-ELK">
+                                    <rect key="frame" x="1" y="115" width="234" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="GtA-gI-i5E">
@@ -1232,7 +1233,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="1lY-hs-G05">
-                                    <rect key="frame" x="0.0" y="0.0" width="10000" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
