@@ -157,8 +157,24 @@ class ViewController: NSViewController, NSTextViewDelegate {
     }
     
     @IBAction func changePicture(sender: AnyObject) {
-        IKPictureTaker().beginPictureTakerSheetForWindow(self.view.window, withDelegate: self, didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:", contextInfo: nil)
+//        IKPictureTaker().beginPictureTakerSheetForWindow(self.view.window, withDelegate: self, didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:", contextInfo: nil)
 //        IKPictureTaker().popUpRecentsMenuForView(self.view, withDelegate: self, didEndSelector: "pictureTakerDidEnd:returnCode:contextInfo:", contextInfo: nil)
+      
+      let openPanel = NSOpenPanel()
+      let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+      let dirURL = NSURL(fileURLWithPath: paths.first as! String)
+      openPanel.directoryURL = dirURL
+      openPanel.canChooseFiles = true
+      openPanel.allowsMultipleSelection = false
+      
+      if (openPanel.runModal() == NSModalResponseOK) {
+        let files = openPanel.URLs
+        println("files \(files)")
+        
+        let image = NSImage(contentsOfURL: files.first as! NSURL)
+        postImageView.image = image
+        postImageConstraint.constant = 100
+      }
     }
     
     func pictureTakerDidEnd(picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafePointer<Void>) {

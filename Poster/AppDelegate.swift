@@ -23,9 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
       
       let userDefaults = NSUserDefaults(suiteName: kSuiteName)
+      
+      postController = NSStoryboard(name: "Main", bundle: nil)?.instantiateControllerWithIdentifier("PostWindowController") as? PosterWindowController
+      postController?.showWindow(self)
       if let username = userDefaults?.stringForKey(kActiveAccountNameKey), accessToken = KeychainAccess.passwordForAccount("AccessToken_\(username)") {
-        postController = NSStoryboard(name: "Main", bundle: nil)?.instantiateControllerWithIdentifier("PostWindowController") as? PosterWindowController
-        postController?.showWindow(self)
       } else {
         loginController = NSStoryboard(name: "Main", bundle: nil)?.instantiateControllerWithIdentifier("LoginWindowController") as? NSWindowController
         loginController?.showWindow(self)

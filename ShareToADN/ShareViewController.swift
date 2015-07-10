@@ -10,7 +10,7 @@ import Cocoa
 import KeychainAccess
 import ADN
 
-let kSuiteName = "group.de.dasdom.posteruserdefaults"
+let kSuiteName = "Q6PD97MRX4.group.de.dasdom.posteruserdefaults"
 let kActiveAccountNameKey = "kActiveAccountNameKey"
 let kAccountNameArrayKey = "kAccountNameArrayKey"
 
